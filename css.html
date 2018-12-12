@@ -1,0 +1,910 @@
+<!doctype html>
+<html lang="PT-BR">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title> CSS </title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/tema/padrao.css" id="tema">
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section data-state="soothe" style="margin-top: 15%;">
+					<h1> CSS </h1>
+					<h3> Introdução à CSS </h3>
+					<br>
+					<p>
+						<small style="margin-top: 5%;"> Sumário:
+        						<a href="css.html#"> Introdução à CSS </a> |
+        						<a href="css.html#/15"> Propriedades do CSS </a>
+      					</small>
+					</p>
+				</section>
+
+				<section style="margin-top: 15%;">
+					<section>
+						<h2> O que é CSS? </h2>
+							<br>
+						<p>
+							O CSS (Cascading Style Sheet), Folhas de Estilo em Cascata, segundo a W3C, é “um mecanismo simples para adicionar estilos  (por exemplo, cores e espaçamento) aos documentos web”.
+						</p>
+
+					</section>
+					<section>
+						<h2> Como utilizar o CSS? </h2>
+							<br>
+						<p> 
+							O código CSS é separado do HTML e permite alteração das características da página; 
+						</p>
+					</section>
+				</section>
+
+				<section>
+					<section>
+
+						<h2> Regras de estilo </h2><br>
+
+						<li> Compostas por duas partes: seletor e declaração. </li>
+
+						<img width="800" height="326" src="images/estilocss.png" alt="css">
+					</section>
+					<section>
+
+						<h2> Regras de estilo </h2><br>
+
+						<p> Onde: </p>
+						<p> Seletor – determina o elemento que será estilizado; </p>
+						<p> Propriedade – define o que será estilizado; </p>
+						<p> Valor – define como o seletor será estilizado. </p><br>
+
+					</section>
+					<section>
+
+						<h2> Regras de estilo </h2><br>
+
+						<p> Observações: </p><br>
+
+						<li> A declaração deve ser colocada entre sinais de chaves  {} e um sinal de dois-pontos : o qual separa a propriedade do seu valor; </li><br>
+						<li> Quando houver mais de uma declaração em uma regra, a separação é feita usando-se ponto-e-vírgula (;). </li>
+
+					</section>
+				</section>
+
+					<section>
+						<h2> Exemplo </h2>
+							<br>
+							<li> Abaixo, uma regra de estilo com várias declarações para estilizar o seletor p; </li>
+							<li> Atributos para definir tamanhos, tipos e cores de letras, cores de fundo, textura, etc. </li>
+
+					<pre><code contenteditable>
+< style type="text/css" media = "all" > 
+       /*Isto é um comentário em CSS*/
+       p {
+            color: white;
+            background-color:  green;
+            font-family: "Arial Narrow";
+      } 
+< / style > 
+					</code></pre>
+
+					</section>
+
+					<section>
+						<h2> O que é uma folha de estilo? </h2>
+							<br>
+						<p>
+							Conjunto de regras estilizadas aplicáveis às páginas de um website, com 3 possibilidades de utilização:
+						</p><br>
+
+						<ul>
+							<li> Locais (inline) – dentro da tag de abertura do elemento de marcação; </li>
+							<li> Incorporada (embedded) – a declaração é apresentada dentro da própria página </li>
+							<li>  Externa (linked) – a declaração é feita em um arquivo externo com extensão .css.</li>
+						</ul>
+					</section>
+
+					<section>
+						<h2> Estilos <i>Inline</i> </h2>
+							<br>
+
+							<ul>
+								<li> As regras de estilo são escritas diretamente dentro da tag de abertura do elemento que será estilizado; </li>
+								<li> Informações de estilo são definidas para apenas um elemento, utilizando-se o atributo style </li>
+								<li> É o método menos recomendado porque as alterações devem ser feitas localmente: </li>
+							</ul>
+					<pre><code contenteditable>
+< body > 
+       < p style="color:white; font-family:Arial Narrow;
+                         background-color: green; "> 
+             Este parágrafo tem cor branca, fonte Arial Narrow  e
+             fundo verde.
+       < / p > 
+< / body > 
+					</code></pre>
+
+					</section>
+
+					<section>
+						<section>
+
+						<h2> Estilos incorporados </h2>
+							<br>
+
+							<ul>
+								<li> Neste método, a declaração da folha de estilos é realizada dentro da tag < head > e com o elemento style; </li>
+								<li> A folha de estilos fica “incorporada” à tag < style > da página HTML na qual será aplicada: </li>
+							</ul>
+
+					<pre><code contenteditable>
+< head > 
+     < style type="text/css"> 
+       p {
+            color: white;
+            font-family: "Arial Narrow";
+            background-color:  red;
+      } 
+     < / style > 
+< / head > 
+< body > 
+   < p > Este parágrafo tem cor branca, fonte Arial Narrow  e fundo verde. < / p > 
+< / body > 
+					</code></pre>
+						</section>
+
+						<section>
+						<h2> Estilos incorporados: Fixação </h2>
+							<br>
+
+							<ul>
+								<li> Crie 3 páginas HTML e, em cada uma delas, adicione a tag < p > e, dentro dela, adicione qualquer texto; </li>
+								<li> Agora, em cada uma das 3 páginas, na tag < head >, adicione o seguinte estilo: </li>
+							</ul>
+
+					<pre><code contenteditable>
+< head > 
+     < style type="text/css" > 
+       p {
+            color: white;
+            font-family: "Arial Narrow";
+            background-color:  blue;
+      } 
+     < / style > 
+< / head >
+					</code></pre>
+						</section>
+
+						</section>
+					</section>
+
+					<section>
+					<section>
+						<h2> Estilos externos </h2>
+							<br>
+
+							<ul>
+								<li> Neste método, ao contrário dos estilos incorporados, não há repetição de código; </li>
+								<li> A declaração é definida em um arquivo externo, do tipo texto, com extensão .css; </li>
+								<li> O arquivo .css contém as regras de estilo que podem ser aplicadas de uma só vez a todos os documentos do website; </li>
+								<li> Existem 2 tipos de fazer referência aos estilos externos: </li>
+								<p> Folhas de estilos “linkadas” e; </p>
+								<p> Folhas de estilos importadas. </p>
+							</ul>
+					</section>
+
+					<section>
+						<h2> Estilos externos: referências </h2>
+							<br>
+								<li> Linkados: o arquivo externo é “linkado” ao documento na seção < head >, com o uso do elemento link: </li>
+					<pre><code contenteditable>
+< head > 
+     < link rel="stylesheet" type="text/css" href= "pathRelativoCSS" 
+      media= "all" > 
+< / head > 
+					</code></pre>
+								<li> Importados: usam @import dentro da tag < head >: </li>
+					<pre><code contenteditable>
+< head >
+  < style type="text/css" > 
+    @import url("css/estilo.css") all;
+  < style >
+< / head > 
+					</code></pre>
+					</section>
+					<section>
+						<h2> Estilos externos </h2>
+							<br>
+								<li> O arquivo .css, criado externamente, teria a seguinte estrutura:  </li><br>
+
+								<img width="500" height="200" src="images/estilocss2.png" alt="css">
+
+					</section>
+
+					<section>
+						<h2> Estilos externos: fixação </h2>
+							<br>
+							<ul>
+								<li> Remova os estilos incorporados do HTML, e em < head > adicione: </li>
+							</ul>
+					<pre><code contenteditable>
+< link rel="stylesheet" type="text/css" href= "css/estilo.css" media= "all" >    
+					</code></pre>
+							<ul>
+								<li> Crie um arquivo chamado estilo.css com a seguinte estrutura, e visualize o resultado: </li>
+							</ul>
+					<pre><code contenteditable>
+p {
+        color: white;
+        font-family: "Arial Narrow";
+        background-color:  red;
+}
+					</code></pre>
+					</section>
+					</section>
+
+					<section>
+
+					<section style="margin-top: 15%;">
+						<h2> Unidades de medida </h2>
+							<br>
+
+						<p> Quando valores são definidos para as propriedades CSS, são utilizadas algumas medidas que se dividem em dois grupos: </p><br>
+					</section>
+
+					<section>
+						<h2> Grupos (Unidades de medida) </h2>
+							<ul>
+
+								<p> Unidades absolutas: </p>
+								<li> in: polegada; </li>
+								<li> cm: centímetro; </li>
+								<li> mm: milímetro; </li>
+								<li> pt: ponto. </li><br>
+
+								<p> Unidades relativas: </p>
+								<li> %; </li>
+								<li> px: define o tamanho de um pixel no monitor; </li>
+								<li> em: igual ao tamanho da fonte definido; </li>
+								<li> ex: equivale à altura da letra “x” minúscula. </li>
+
+							</ul>
+					</section>
+					</section>
+
+					<section>
+						<h2> Seletor: Universal </h2>
+							<br>
+
+							<ul>
+								<li> Aplicado a todos os elementos de um documento; </li>
+								<li> O uso mais comum é o estabelecimento de regras de estilo para “zerar” a estilização-padrão do navegador para todos os elementos HTML da página; </li>
+								<li> O exemplo abaixo indica que todos os elementos que possuem o atributo color ficarão com a cor blue: </li>
+							</ul>
+
+					<pre><code contenteditable>
+* { 
+      color: blue; 
+}
+					</code></pre>
+					</section>
+
+					<section>
+						<h2> Seletor: Tipo </h2>
+							<br>
+
+							<ul>
+								<li> O estilo é aplicado a um determinado elemento da marcação (por exemplo, um parágrafo, uma div, etc); </li>
+								<li> No exemplo abaixo, os parágrafos ficarão red, os cabeçalhos de nível 1 serão itálicos e os itens de uma lista ficarão em negrito: </li>
+							</ul>
+
+					<pre><code contenteditable>
+p {
+	color: red;
+}
+
+h1 {
+	font-style: italic;
+}
+
+li {
+	font-weight: bold;
+}
+					</code></pre>
+					</section>
+
+					<section>
+					<section>
+						<h2> Seletor: class </h2>
+							<br>
+							<ul>
+								<li> Permite a definição de vários estilos a um mesmo elemento: </li>
+							</ul>
+					<pre><code contenteditable>
+li.vermelho {
+	color: red;
+}    
+
+li.azul {
+	color: blue;
+}
+					</code></pre>
+							<ul>
+								<li> No código HTML, a referência ao seletor class é feita da seguinte forma: </li>
+							</ul>
+					</section>
+
+					<section>
+						<h2> Seletor: class </h2> <br>
+					<pre><code contenteditable>
+< body >
+	< ul >
+		< li class="vermelho" > Item na cor vermelha < / li >
+		< li class="azul" > Item na cor azul < / li >
+	< / ul >
+< / body >
+
+					</code></pre>
+					</section>
+					</section>
+
+					<section>
+					<section>
+						<h2> Seletor: ID </h2>
+							<br>
+							<ul>
+								<li> Denomina-se assim porque usa-se o atributo id no elemento HTML para criar um identificador único; </li>
+								<li> Diferentemente do seletor class, ele deve ser aplicado a apenas um único elemento da página; </li><br>
+
+								<li> No CSS: </li>
+							</ul>
+					<pre><code contenteditable>
+h1#cab {
+	text-decoration: line-through;
+	background-color: pink;
+}
+					</code></pre>
+					</section>
+
+					<section>
+						<h2> Seletor: ID </h2> <br>
+							<ul>
+								<li> Na marcação HTML: </li>
+							</ul>
+					<pre><code contenteditable>
+< body >
+	< ul >
+		< h1 > H1 usando seletor Tipo < / h1 >
+		< h1 id="cab" > H1 usando seletor ID < / h1 >
+	< / ul >
+< / body >
+
+					</code></pre>
+					</section>
+					</section>
+
+					<section>
+						<h2> Seletor: grupo </h2>
+							<br>
+							<ul>
+								<li> Agrupa os seletores para minimizar o código CSS; </li>
+								<li> Cada elemento é separado por uma vírgula; </li><br>
+
+								<li> No CSS: </li>
+							</ul>
+					<pre><code contenteditable>
+h2, h3, h4, h5 {
+	color: red;
+}
+					</code></pre>
+					</section>
+
+					<section>
+					<section>
+						<h2> Seletor elem1 elem2 </h2>
+							<br>
+							<ul>
+								<li> Usado para estilizar o elemento elem2 que está dentro do elemento elem1; </li><br>
+
+								<li> No CSS: </li>
+							</ul>
+					<pre><code contenteditable>
+div h1 {
+	text-decoration: underline;
+	background-color: yellow;
+}
+					</code></pre>
+					</section>
+
+					<section>
+						<h2> Seletor elem1 elem2 </h2> <br>
+							<ul>
+								<li> Na marcação HTML: </li>
+							</ul>
+					<pre><code contenteditable>
+< body >
+	< div >
+		< h1 > H1 dentro de uma div < / h1 >
+	< / div >
+< / body >
+
+					</code></pre>
+					</section>
+					</section>
+
+				<section data-state="soothe" style="margin-top: 15%">
+					<section>
+						<h1> CSS </h1>
+						<h3> Propriedades do CSS </h3>
+						<p>
+						<br>
+						<small style="margin-top: 5%;"> Sumário:
+        						<a href="css.html#"> Introdução à CSS </a> |
+        						<a href="css.html#/15"> Propriedades do CSS </a>
+      					</small>
+						</p>
+
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2> Propriedades Font </h2>
+							<br>
+						<p>
+							Os nomes das propriedades Font são bem intuitivos:  
+						</p><br>
+
+						<ul>
+							<li>  font-family </li>
+							<li> font-size </li>
+							<li> font-style </li>
+							<li> font-weight – define o peso da fonte </li>
+							<li> font – define todas as propriedades Font em apenas uma declaração. </li>
+						</ul>
+
+					</section>
+					<section>
+						<h2> Exemplo </h2>
+							<br>
+					<pre><code contenteditable>
+p {
+	font-family: "Courier New", "MS Sans Serif", "Arial";
+	font-size: 12pt;
+	font-style: italic;
+	font-weight: bold;
+}
+
+					</code></pre>
+					</section>
+
+				</section>
+
+				<section>
+				<section>
+					<h2> Propriedades Background </h2>
+					<p> background-color – atribui uma cor no plano de fundo de um elemento; </p>
+					<pre><code contenteditable>
+body {
+	background-color: yellow;
+}
+
+h1 {
+	background-color: #00ff00;
+}
+
+p {
+	background-color: rgb(255, 0, 255)
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Background </h2>
+					<p> background-image – define uma imagem de fundo na página; </p>
+					<pre><code contenteditable>
+body {
+	background-color: yellow;
+	background-image: url('img/logoIFRN.jpg');
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Background </h2>
+					<p> background-repeat – controla o comportamento de repetição da imagem de fundo; </p>
+					<pre><code contenteditable>
+body {
+	background: url('img/logoIFRN.jpg') fixed no-repeat center;
+	background-color: green;
+}
+					</code></pre>
+				</section>
+				</section>
+
+				<section>
+				<section>
+					<h2> Propriedades Border </h2>
+					<p> border – pode ser usada para definir todas as propriedades de estilo de uma borda; </p>
+					<pre><code contenteditable>
+p {
+	border: 5px solid red;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Border </h2>
+					<p> border-style – define o estilo das quatro bordas; </p>
+					<pre><code contenteditable>
+p.none { border-style: none;}
+p.dotted { border-style: dotted;}
+p.dashed { border-style: dashed;}
+p.solid { border-style: solid;}
+p.double { border-style: double;}
+p.groove { border-style: groove;}
+p.ridge { border-style: ridge;}
+p.inset { border-style: inset;}
+p.outset { border-style: outset;}
+p.hidden { border-style: hidden;}
+					</code></pre>					
+				</section>
+
+				<section>
+					<h2> Propriedades Border </h2>
+					<p> border-color – define cor(es) para as bordas; </p>
+					<pre><code contenteditable>
+p.one {
+	border-style: solid;
+	border-color: #0000ff;
+}
+
+p.two {
+	border-style: solid;
+	border-color: #ff0000 #0000ff;
+}
+
+p.three {
+	border-style: solid
+	border-color: #ff0000 #00ff00 #0000ff;
+}
+
+p.four {
+	border-style: double
+	border-color: #ff0000 #00ff00 #0000ff rgb(255, 0, 255);
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Border </h2>
+					<p> border-width – define a largura das quatro bordas; </p>
+					<pre><code contenteditable>
+p.one {
+	border-style: solid;
+	border-color: #0000ff;
+	border-width: 5px;
+}
+
+p.two {
+	border-style: solid;
+	border-width: medium;
+}
+					</code></pre>
+				</section>
+
+				<section>
+						<h2> Propriedades derivadas </h2>
+							<ul>
+
+								<li> Border-Bottom: border-bottom-color, border-bottom-style, border-bottom-width </li><br>
+
+								<li> Border-Left: border-left-color, border-left-style, border-left-width </li><br>
+
+								<li> Border-Right: border-right-color, border-right-style, border-right-width </li><br>
+
+								<li> Border-Top: border-top-color, border-top-style, border-top-width </li>
+
+							</ul>
+				</section>
+
+				<section>
+					<h2> Propriedades Border </h2>
+					<p> border-radius – define uma forma arredondada para as bordas; </p>
+					<pre><code contenteditable>
+div {
+	border: 2px solid #a1a1a1;
+	padding: 10px 40px;
+	background: #dddddd;
+	width: 300px;
+	border-radius: 25px;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Border </h2>
+					<p> box-shadow – adiciona uma sombra em uma div; </p>
+					<pre><code contenteditable>
+div {
+	width: 300px;
+	height: 100px;
+	background-color: yellow;
+	box-shadow: 10px 10px 5px #888888;
+	border-radius: 10px;
+}
+					</code></pre>
+				</section>
+				</section>
+
+				<section>
+				<section>
+					<h2> Propriedades Text </h2>
+					<p> color – define a cor do texto; </p>
+					<pre><code contenteditable>
+body {
+	color: red;
+}
+
+h1 {
+	color: #00ff00;
+}
+
+p.ex {
+	color: rgb(0, 0, 255);
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Text </h2>
+					<p> direction – define a direção (rtl ou ltr) do texto; </p>
+					<pre><code contenteditable>
+div.direitaParaEsquerda {
+	direction: rtl;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Text </h2>
+					<p> line-height – define a altura da linha. É uma espécie de espaçamento entre linhas; </p>
+					<pre><code contenteditable>
+p.small {
+	line-height: 70%;
+}
+
+p.big {
+	line-height: 200%;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Text </h2>
+					<p> text-align – permite o alinhamento do texto à esquerda (left), à direita (right), centralizado (center) ou justificado (justify); </p>
+					<pre><code contenteditable>
+div {
+	width: 300px;
+	height: 100px;
+	background-color: silver;
+	box-shadow: 10px 10px 5px #888888;
+	border-radius: 10px;
+}
+
+p {
+	text-align: justify;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Text </h2>
+
+					<ul>
+					<p> text-decoration – possibilita que sejam colocadas “decorações” no texto; </p>
+					<p> As estilizações são: texto sublinhado (underline), linha sobre o texto (overline), linha cortando o texto (line-through) e efeito “pisca” (blink ); </p>
+					</ul>
+					<pre><code contenteditable>
+h3.ov { text-decoration: overline;}
+h3.th { text-decoration: line-through;}
+h3.un { text-decoration: underline;}
+h3.bl { text-decoration: blink;}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Text </h2>
+					<p> text-indent – define a identação da primeira linha em um bloco de texto; </p>
+					<pre><code contenteditable>
+#ex1 { text-shadow: 2px 2px red;}
+#ex2 { text-shadow: 5px 5px #00ff00;}
+#ex3 { text-shadow: -10px 10px red;}
+#ex4 { text-shadow: 5px 5px 1px #00ff00;}
+#ex5 { text-shadow: 5px 5px 3px #00ff00;}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades Text </h2>
+					<p> text-shadow – coloca uma “sombra” no texto; </p>
+					<pre><code contenteditable>
+p {
+	text-indent: 50px;
+	text-align: justify;
+}
+					</code></pre>
+				</section>
+				</section>
+
+				<section>
+					<h2> Propriedades Outline </h2>
+					<p> Definem a criação de contornos nos elementos e são semelhantes às bordas de um elemento: </p>
+						<ul>
+							<li> outline-style – define o estilo do contorno; </li>
+							<li> outline-color – define a cor do contorno; </li>
+							<li> outline-width – define a largura do contorno. </li>
+						</ul>
+					<pre><code contenteditable>
+div {
+	outline-style: solid;
+	outline-color: red;
+	outline-width: thin;
+	background-color: silver;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Propriedades List </h2>
+					<p> Definem estilização nos elementos de uma lista: </p>
+					<ul>
+						<li> list-style-image – define uma imagem como marcador: </li>
+					</ul>
+					<pre><code contenteditable>
+ul {
+	list-style-image: url('sqpurple.gif')
+}
+					</code></pre>
+
+					<ul>
+						<li> list-style-type – define o tipo do marcador: </li>
+					</ul>
+					<pre><code contenteditable>
+ul.a { list-style-type: circle; }
+ul.a { list-style-type: square; }
+ol.a { list-style-type: upper-roman; }
+ol.a { list-style-type: lower-alpha; }
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Links </h2>
+						<ul>
+							<li> É possível definir as propriedades de um link de acordo com o seu estado e incrementar a página com efeitos interessantes; </li>
+							<li> Os estados podem ser: visitado, não visitado, ativo ou com o ponteiro do mouse sobre o link; </li>
+						</ul>
+					<pre><code contenteditable>
+a {
+	text-decoration: none; /*Remove o sublinhado do link*/
+}
+
+a:link { color: green;}
+a:visited { color: yellow;}
+a:hover { color: black;}
+a:active { color: blue;}
+					</code></pre>
+				</section>
+
+				<section>
+				<section>
+					<h2> Pseudo-classe: link </h2>
+						<ul>
+							<li> Esta pseudo-classe é usada para estilizar links não-visitados; </li>
+							<li> No exemplo abaixo, enquanto os links não forem visitados eles permanecerão na cor verde: </li>
+						</ul>
+					<pre><code contenteditable>
+a {
+	text-decoration: none; /*Remove o sublinhado do link*/
+}
+
+/*Enquanto o link não for visitado*/
+
+a:link {
+	color: green;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Pseudo-classe: visited </h2>
+						<ul>
+							<li> Usada para estilizar links visitados; </li>
+							<li> No exemplo abaixo, depois que os links forem visitados ficarão na cor vermelha: </li>
+						</ul>
+					<pre><code contenteditable>
+/*Depois que o link for visitado*/
+
+a:visited {
+	color: red;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Pseudo-classe: active </h2>
+						<ul>
+							<li> Usada para estilizar links ativos; </li>
+							<li> No exemplo abaixo, quando um link estiver ativo a sua cor de fundo será amarelo: </li>
+						</ul>
+					<pre><code contenteditable>
+/*Quando o link estiver ativo*/
+
+a:active {
+	background-color: yellow;
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Pseudo-classe: hover </h2>
+						<ul>
+							<li> Usada para disparar o evento quando o ponteiro do mouse estiver sobre o link; </li>
+						</ul>
+					<pre><code contenteditable>
+/*Quando o cursor do mouse estiver sobre o link*/
+
+a:hover {
+	text-transform: uppercase;
+	font-style: 16pt;
+	font-weight: bold;
+}
+					</code></pre>
+				</section>
+				</section>
+
+				<section data-state="soothe" style="margin-top: 15%">
+					
+					<h1> Parabéns! </h1><br>
+					<h3> Você concluiu o módulo CSS. </h3>
+
+					<a href="index.html"><img src="images/home.png" width="100" height="100"></a>
+				</section>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme,	
+				transition: Reveal.getQueryHash().transition || 'default',
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

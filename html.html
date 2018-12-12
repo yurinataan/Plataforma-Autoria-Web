@@ -1,0 +1,1733 @@
+<!doctype html>
+<html lang="PT-BR">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title> HTML </title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/tema/padrao.css" id="tema">
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section data-state="soothe" style="margin-top: 15%;">
+					<h1> HTML </h1>
+					<h3> Introdução à HTML </h3>
+					<br>
+					<p>
+						<small style="margin-top: 5%;"> Sumário:
+        						<a href="html.html#"> Introdução a HTML </a> |
+        						<a href="html.html#/4"> Tags HTML - Parte I </a> |
+        						<a href="html.html#/23"> Tags HTML - Parte II </a> |
+        						<a href="html.html#/34"> Formulários HTML </a>
+      					</small>
+					</p>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section style="margin-top: 15%;">
+					<section>
+						<h2> O que é HTML? </h2>
+							<br>
+						<p>
+							HTML (<i>H</i>iper<i>T</i>ext <i>M</i>arkup <i>L</i>anguage) é uma linguagem de marcação usada para construir páginas web.  
+						</p>
+
+					</section>
+					<section>
+						<h2> Marcação? </h2>
+							<br>
+						<p> 
+							As marcações servem para estruturar as páginas através de cabeçalho, corpo e rodapé. Além de incluir parágrafos, imagens, listas e formulários. 
+						</p>
+					</section>
+					<section>
+						<h2> Como utilizar o HTML? </h2>
+							<br>
+						<p> 
+							Os documentos HTML são interpretados pelo navegador, e podem ser criados através de diversas ferramentas. Indo das mais simples até as sofisticadas.
+						</p>
+					</section>
+				</section>
+
+				<section style="margin-top: 15%">
+					<section>
+						<h2> Evolução do HTML </h2>
+							<br>
+							<h3> HTML </h3>
+								<p>
+									Criada por Berners-Lee para que pudesse compartilhar pesquisas com o seu grupo.
+								</p>
+
+					</section>
+
+					<section>
+						<h2> Evolução do HTML </h2>
+							<br>
+							<h3> HTML 2.0 </h3>
+								<p>
+									Atributos para definir tamanhos, tipos e cores de letras, cores de fundo, textura, etc.
+								</p>
+
+					</section>
+
+					<section>
+						<h2> Evolução do HTML </h2>
+							<br>
+							<h3> HTML 3.0 </h3>
+								<p>
+									Atributo class, estilização, tabelas, notas de rodapé e formulários.
+								</p>
+
+					</section>
+
+					<section>
+						<h2> Evolução do HTML </h2>
+							<br>
+							<h3> HTML 3.2 </h3>
+								<p>
+									Incorporou os elementos table e applets.
+								</p>
+
+					</section>
+
+					<section>
+						<h2> Evolução do HTML </h2>
+							<br>
+							<h3> HTML 4 </h3>
+								<p>
+									Endossada pela W3C como uma recomendação oficial.
+								</p>
+
+					</section>
+
+					<section>
+						<h2> Evolução do HTML </h2>
+							<br>
+							<h3> HTML 4.01 </h3>
+								<p>
+									Possui 3 variantes: Strict, Transitional e Frameset.
+								</p>
+
+					</section>
+
+					<section>
+						<h2> Evolução do HTML </h2>
+							<br>
+							<h3> HTML 5 </h3>
+								<p>
+									Versão atual
+								</p>
+					</section>
+				</section>
+
+				<section>
+					<section  style="margin-top: 15%;">
+						<h2> HTML 5 </h2>
+							<br>
+						<p>
+							Surgiu a partir da cooperação entre a World Wide Web Consortium  (W3C) e a Web Hypertext Application Technology Working Group (WHATWG);
+						</p>
+					</section>
+
+					<section  style="margin-top: 5%;">
+						<h2> HTML 5 </h2>
+							<br>
+						<h3> O acordo definiu algumas regras: </h3>
+						<ul>
+							<li> Reduzir o uso de plugins externos (Flash, por exemplo); </li>
+							<li> Melhor tratamento de erro; </li>
+							<li> HTML 5 deve ser independente do dispositivo; </li>
+							<li> HTML 3.2: Incorporou os elementos table e applets. </li>
+							<li> O processo de desenvolvimento deve ser visível ao público. </li>
+						</ul>
+					</section>
+
+					<section  style="margin-top: 5%;">
+						<h2> HTML 5 </h2>
+							<br>
+						<h3> Novidades </h3>
+						<ul>
+							<li> O elemento <i>canvas</i> para desenho em 2D; </li>
+							<li> Os elementos <i>video</i> e <i>audio</i> para reprodução de mídia; </li>
+							<li> Novos elementos específicos de conteúdo, como <i>article</i>, <i>footer</i>, <i>header</i>, <i>nav</i> e <i>section</i>; </li>
+							<li> Novos controles de formulário: calendário, data, hora, email, url e pesquisa. </li>
+						</ul>
+					</section>
+				</section>
+
+				<section data-state="soothe" style="margin-top: 15%">
+					<section>
+						<h1> HTML </h1>
+						<h3> Tags HTML - Parte I </h3>
+						<p>
+						<br>
+						<small style="margin-top: 5%;"> Sumário:
+        						<a href="html.html#"> Introdução a HTML </a> |
+        						<a href="html.html#/4"> Tags HTML - Parte I </a> |
+        						<a href="html.html#/23"> Tags HTML - Parte II </a> |
+        						<a href="html.html#/34"> Formulários HTML </a>
+      					</small>
+						</p>
+
+					</section>
+				</section>
+
+				<section style="margin-top: 15%;">
+					<section>
+						<h2> O que são Tags? </h2>
+							<br>
+						<p>
+							Tags são rótulos (etiquetas) usados para informar ao browser  como ele deve apresentar o website;  
+						</p>
+
+					</section>
+					<section>
+						<h2> Como utilizar? </h2>
+							<br>
+						<p> 
+							As marcações servem para estruturar as páginas através de cabeçalho, corpo e rodapé. Além de incluir parágrafos, imagens, listas e formulários. 
+						</p>
+					</section>
+					<section>
+						<h2> Como utilizar o HTML? </h2>
+							<br>
+						<p> 
+							As tags são conhecidas por serem envolvidas pelos sinais <b> <  > </b> e <b> < / > </b>;
+						</p>
+					</section>
+					<section>
+						<h2> Calma, não entendi muito bem... </h2>
+							<br>
+						<p> 
+							O formato genérico de uma tag é : <b> <  > </b> conteúdo <b> < / > </b>, ou seja, todo conteúdo necessário para uma página web ficará dentro de uma tag específica.
+						</p><br>
+
+						<p>
+							A / indica que a tag está finalizando a marcação de um texto.
+						</p>
+					</section>					
+				</section>
+
+				<section>
+					<h2> Estrutura básica do HTML 5</h2>
+					<pre><code contenteditable>
+< !DOCTYPE html >
+< html >
+   < head >
+      < title > Aqui fica o título da minha página < / title >
+   < / head >
+   < body >
+      Aqui fica o conteúdo da minha primeira página HTML
+   < / body >
+< / html >
+					</code></pre>
+						<ul>
+							<li> < !DOCTYPE > deve ser a primeira instrução de um documento HTML, antes mesmo da < html >; </li>
+							<li> A declaração não é uma tag, mas sim uma instrução que sinaliza ao navegador qual a versão está sendo utilizada naquele documento; </li>
+						</ul>
+				</section>
+
+				<section>
+					<h2> Exemplo </h2>
+					<pre><code contenteditable>
+< !DOCTYPE html >
+< html >
+   < head >
+      < title > Tag H < / title >
+   < / head >
+   < body >
+      < !-- Testando as tags de comentário e de cabeçalho -->
+      < h1 style ="color:blue;text-align:center"> Cabeçalho de Nível 1 < / h1 >
+      < h2 style ="text-decoration:underline;text-align:right; font-style:italic"> Cabeçalho de Nível  2 < / h2>
+      < h3 > Cabeçalho de Nível  3 < / h3 >
+      < h4 > Cabeçalho de Nível  4 < / h4 >
+      < h5 > Cabeçalho de Nível  5 < / h5 >
+      < h6 > Cabeçalho de Nível  6 < / h6 >
+   < / body >
+< / html >
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Tag < p > </h2>
+						<ul>
+							<li> Uma página HTML não reconhece < ENTER > como parágrafo. A tag < p > tem esse papel: </li>
+						</ul>
+					<pre><code contenteditable>
+< body >
+< h2 > Usando a tag P < / h2 >
+< p style="text-align:justify;font-family:Calibri;font-size:13pt"> 
+Enquanto o W3C focava suas atenções para a criação da segunda 
+versão do XHTML, um grupo chamado Web Hypertext Application 
+Technology Working Group ou WHATWG trabalhava em uma 
+versão do HTML que trazia mais flexibilidade para a produção de 
+websites e sistemas baseados na web.
+< /p >
+< p style="text-align:justify;text-indent:2cm"> 
+O  WHATWG  foi  fundado  por  desenvolvedores  de  empresas  como 
+Mozilla, Apple e Opera em 2004. Eles não estavam felizes com o 
+caminho que a Web tomava e nem com o rumo dado ao XHTML. 
+Por isso, estas organizações se juntaram para escrever o que seria 
+chamado hoje de HTML5.
+< / p >
+< / body >
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Tag < abbr > </h2>
+						<ul>
+							<li> A tag < abbr > indica uma abreviatura ou acrônimo; </li>
+							<li> A marcação de abreviaturas e acrônimos pode ser útil para browsers, motores de busca, indexadores, sistemas ortográficos e de tradução. </li>
+						</ul>
+					<pre><code contenteditable>
+< body >
+< h2 > Usando a tag Abbr – coloque o cursor sobre a sigla W3C < / h2 >
+
+< p style="text-align:justify"> 
+Enquanto o < abbr title = "World Wide Web Consortium" > W3C
+< / abbr > focava suas atenções para a criação da segunda versão do 
+XHTML, um grupo chamado Web Hypertext Application Technology 
+Working Group ou WHATWG trabalhava em uma versão do HTML que 
+trazia mais flexibilidade para a produção de websites e sistemas 
+baseados na web.
+< / p >  
+< / body >
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Tag < br > e < hr > </h2>
+						<ul>
+							<li> Em muitas situações, é necessário quebrar uma linha e continuar o texto na linha seguinte. Para isso usamos a < br > : </li>
+						</ul>
+					<pre><code contenteditable>
+< body >
+ < h2 > Apesar de cigano – Jorge Vercilo < /h2 > 
+    < hr > < !-- Horizontal Ruler: cria uma linha horizontal --> < br >
+     Andei pelo mundo procurando um grande amor < br >
+	Zum-zum-zum de abelha farejando o mel da flor < br >
+	E muitas mulheres foram flores nesse meu jardim < br >
+	Mas não adiantou você estava em mim < br > < br >
+
+	(Refrão) < br >
+
+	Amei em Pequim, em Jerusalém, em Amsterdã < br >
+	Mas o meu divã é tua pele tupi, guaraná, guarani < br >
+	Cheguei em Paris, de lá, pude ver toda tua luz, minha Vera Cruz < br >
+	Eu te amo e, apesar de cigano, só penso em você < br >
+< / body >
+
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Estilos de texto </h2>
+						<ul>
+							<li> < b > : Negrito </li>
+							<li> < i > : Itálico </li>
+							<li> < sup > : Sobrescrito </li>
+							<li> < sub > : Subscrito </li>
+							<li> < mark > : Destaque </li>
+						</ul>
+					<pre><code contenteditable>
+< body >
+   < h2 > Estilizando textos < / h2 >
+   < b style="color:blue; text-decoration:underline"> IFRN < / b > < br >
+   < i > IFRN < / i > < br >
+   f(x) = x < sup > 2 < / sup > +3 < br >
+   H < sub > 2 < / sub > O < br >
+   < mark > IFRN < / mark > < br >  < !-- A cor padrão da tag mark é amarela -->
+   < mark style="background-color:red"> IFRN < / mark >
+< / body >
+
+					</code></pre>
+				</section>
+
+				<section>
+					<section>
+
+						<h2> Aplicando cor na página </h2><br>
+						<h3> Cores Hexadicimal </h3>
+						<img width="500" height="326" src="http://1.bp.blogspot.com/--yP96yhq384/UlGswvA8ySI/AAAAAAAAAko/SnaO5oESwKQ/s640/tabela_cores.png" alt="cores">
+
+					</section>
+
+					<section>
+
+						<h2> Exemplo </h2>
+
+					<ul>
+						<li> Abra o arquivo contendo a letra da música digitada anteriormente e aplique uma cor ao fundo da página usando o atributo bgcolor: </li>
+					</ul>
+					<pre><code contenteditable>
+
+. . .
+< body bgcolor="#FFFF80" >
+ < h2 > Apesar de cigano – Jorge Vercilo < / h2 >  
+    < hr > < !-- Horizontal Ruler: cria uma linha horizontal --> < br >
+     Andei pelo mundo procurando um grande amor < br >
+	Zum-zum-zum de abelha farejando o mel da flor < br >
+	E muitas mulheres foram flores nesse meu jardim < br >
+	Mas não adiantou você estava em mim < br > < br >
+
+	< b > (Refrão) < / b > < br >
+	Amei em Pequim, em Jerusalém, em Amsterdã < br >
+	Mas o meu divã é tua pele tupi, guaraná, guarani < br > 
+	Cheguei em Paris, de lá, pude ver toda tua luz, minha Vera Cruz < br > 
+	Eu te amo e, apesar de cigano, só penso em você < br >
+< / body >
+. . .
+
+
+					</code></pre>
+
+					</section>
+				</section>
+
+					<section>
+
+						<h2> Adicionando imagem no fundo  </h2>
+
+					<ul>
+						<li> Para adicionar uma imagem no fundo da página, basta utilizar o atributo <i>background</i>. Para mudar a cor de toda a fonte de uma página, usar o atributo <i>text</i>. </li>
+					</ul>
+					<pre><code contenteditable>
+
+. . .
+< body background="JorgeVecilo.jpg" text="yellow" >
+ < h2 > Apesar de cigano – Jorge Vercilo < / h2 >  
+    < hr > < !-- Horizontal Ruler: cria uma linha horizontal --> < br >
+     Andei pelo mundo procurando um grande amor < br >
+	Zum-zum-zum de abelha farejando o mel da flor < br >
+	E muitas mulheres foram flores nesse meu jardim < br >
+	Mas não adiantou você estava em mim < br > < br >
+
+	< b > (Refrão) < / b > < br >
+	Amei em Pequim, em Jerusalém, em Amsterdã < br >
+	Mas o meu divã é tua pele tupi, guaraná, guarani < br > 
+	Cheguei em Paris, de lá, pude ver toda tua luz, minha Vera Cruz < br > 
+	Eu te amo e, apesar de cigano, só penso em você < br >
+< / body >
+. . .
+
+					</code></pre>
+
+					</section>
+
+					<section>
+
+						<h2> Tag < img >  </h2>
+
+					<ul>
+						<li> Para incluir imagens em uma página, basta usar a tag <i>img</i> com o atributo <i>src</i>. Os atributos <i>width</i> e <i>height</i> são opcionais. </li>
+					</ul>
+					<pre><code contenteditable>
+. . .
+< body bgcolor="#FFFF80" >
+< img title= "Jorge Vercilo" src="jorgeVercilo.jpg" alt="Img Vercilo" width="60" height="60" / > < br >
+
+ < h2 > Apesar de cigano – Jorge Vercilo < / h2 >  
+    < hr > < !-- Horizontal Ruler: cria uma linha horizontal --> < br >
+    Andei pelo mundo procurando um grande amor < br >
+	Zum-zum-zum de abelha farejando o mel da flor < br >
+	E muitas mulheres foram flores nesse meu jardim < br >
+	Mas não adiantou você estava em mim < br > < br >
+
+	< b > (Refrão) < / b > < br >
+	Amei em Pequim, em Jerusalém, em Amsterdã < br >
+	Mas o meu divã é tua pele tupi, guaraná, guarani < br > 
+	Cheguei em Paris, de lá, pude ver toda tua luz, minha Vera Cruz < br > 
+	Eu te amo e, apesar de cigano, só penso em você < br >
+< / body >
+. . .
+
+					</code></pre>
+
+					</section>
+
+					<section>
+
+					<h2> Tag < meta >  </h2>
+
+					<ul>
+						<li> Fornece metadados sobre o documento HTML e não é exibida no browser; </li>
+						<li> Definida dentro da tag < head > e, normalmente, usada para descrever páginas, palavras-chave, autor do documento e outros. </li>
+					</ul>
+
+					<pre><code contenteditable>
+. . .
+< head >
+     < meta name="description" content="Material usado na disciplina Autoria Web" / >
+     < meta name="keywords" content = "IFRN, Autoria Web" / >
+     < meta name="author" content = "Fábio" / >
+     < meta http-equiv="Content-Type" content="text/html; charset=UTF-8" / >
+     < title > Metatags < / title >
+< / head >
+. . .
+					</code></pre>
+
+					</section>
+
+				<section>
+				<section>
+
+					<h2> Listas </h2><br>
+
+					<ul>
+					<h3> Lista ordenada </h3>
+
+					<ol>
+						<li> Informática </li>
+						<li> Sistemas </li>
+						<li> Mecatrônica </li><br>
+					</ol>
+
+					<h3> Lista Desordenada </h3>
+					
+					<ul>
+						<li> Informática </li>
+						<li> Sistemas </li>
+						<li> Mecatrônica </li>
+					</ul>
+					<ul>
+
+				</section>
+
+					<section>
+
+					<h2> Exemplo </h2>
+
+					<pre><code contenteditable>
+< !DOCTYPE html>
+< html > 
+   < head > 
+      < title > Listas < / title > 
+   < / head > 
+   < body > 
+     < h2 >
+        Exemplos de listas
+     < / h2 >
+
+     Lista ordenada: < br />
+     < ol type= "i" >
+         < li > Informática < / li >
+         < li > Sistemas para Internet < / li >
+         < li > Mecatrônica < / li >
+     < / ol >
+
+     Lista desordenada: < br />
+     < ul type= "square" >
+         < li > Informática < / li >
+         < li > Sistemas para Internet < / li >
+         < li > Mecatrônica < / li >
+     < / ul >
+   < / body > 
+< / html >
+
+					</code></pre>
+
+					</section>
+				</section>
+
+				<section>
+					<section>
+
+					<h2> Hipertexto - Tag < a > </h2><br>
+
+					<ul>
+						<li> Um hipertexto (ou link) é uma forma não linear de apresentar a informação textual; </li><br>
+						<li> Outros conjuntos de informação são agregados (textos, palavras, imagens ou sons) cujo acesso se dá através de referências específicas denominadas links. </li><br>
+						<li> Em HTML, para criar um link utiliza-se a tag < a > e o seu principal atributo é o href que indica o destino. </li><br>
+						<li> O atributo target indica como o destino será exibido; </li><br>
+						<li> Em < body >, podemos utilizar os atributos link, alink e vlink para especificar a cor de cada um dos links de acordo com o seu status. </li>
+					</ul>
+
+					</section>
+
+					<section>
+						<h2> Exemplo </h2>
+
+					<pre><code contenteditable>
+< !DOCTYPE html >
+< html >
+   < head >
+      < title > Hiperlinks < / title >
+   < / head >
+   < body link="blue" alink= "red" vlink="green"> Clique < a href="https://sites.google.com/site/fabioomedeiros/autoria-web" target="_blank"> aqui < / a > para abrir o site da disciplina em < b > outra página < / b > < br > < br > Já < a href="http://www.ifrn.edu.br"> neste link < / a >, o portal do IFRN será aberto < b > nesta mesma página < / b >
+   < / body >
+< / html >
+
+					</code></pre>
+
+					<br>
+
+					<ul>
+						<li> Link: Link não visitado. </li>
+						<li> Alink: Link ativo. </li>
+						<li> Vlink: Link visitado. </li>
+					</ul>
+					</section>
+
+				</section>
+
+				<section>
+
+					<h2> Âncoras  </h2>
+
+					<ul>
+						<li> Representam uma forma de fazer referência a um trecho específico dentro de um documento; </li>
+						<li> Formada pelos atributos <i>id</i> e <i>name</i> que devem ter o mesmo nome e serem únicos na página. </li>
+					</ul>
+
+					<pre><code contenteditable>
+. . .
+< body >  
+       < a name = "inicio" id = "inicio"> < b > Início da página < / b > < / a > < br > < br > Para visualizar a ação da âncora, redimensione a página de forma que apareça a barra de rolagem vertical. < br > < br >
+
+       Clique < a href="#final"> aqui < / a > para ir para o FINAL da página < br > < br >
+       Linha 1 < br /> Linha 2 < br > Linha 3 < br /> Linha 4 < br /> Linha 5 < br >
+       Linha 6 < br /> Linha 7 < br > Linha 8 < br /> Linha 9 < br /> Linha 10 < br >
+       Linha 11 < br /> Linha 12 < br > Linha 13 < br /> Linha 4 < br> Linha 15 < br >  
+
+	< a name = "final" id = "final"> < b > Final da página < / b > < / a > < br > < br >
+       Clique < a href="#inicio"> aqui < / a > para voltar para o INÍCIO da página
+  < / body >
+. . .
+
+					</code></pre>
+
+					</section>
+
+				<section>
+					<section>
+						<h2> Caminhos </h2>
+
+						<ul>
+							<li> Um dos erros frequentes de pessoas que iniciam a construção de sites é a definição errada dos caminhos dos arquivos; </li><br>
+							<li> Ao inserir um elemento (imagem, som, etc) é necessário definir claramente onde o recurso está para que o browser o encontre; </li><br>
+							<li> Assim, existem 2 formas para definir o caminho dos arquivos: Caminho absoluto e caminho relativo. </li>
+						</ul>
+					</section>
+					<section>
+						<h2> Caminho absoluto </h2>
+						<p> Caminho que o navegador precisa seguir para encontrar o arquivo, definido desde o início. Por exemplo: </p>
+
+					<br>
+
+					<pre><code contenteditable>
+http://www.medeiros.com/sistemas/sigai/cadastro.html
+					</code></pre>
+
+					<br>
+
+						<ul>
+							<li> O exemplo indica o caminho absoluto do arquivo cadastro.html, localizado na pasta sigai, que está na pasta sistemas, localizada no domínio medeiros; </li>
+							<li> Em geral, os caminhos absolutos são usados para ‘”linkar” arquivos que estão fora do domínio de nosso site. </li>
+						</ul>
+					</section>
+					<section>
+						<h2> Caminho relativo </h2>
+
+						<ul>
+							<li> Tomam o próprio documento HTML como referência para encontrar outros elementos, desde a página até o arquivo; </li><br>
+							<li> Neste caso, não precisa escrever todo o caminho para chegar até ele (caminho absoluto), mas sim como chegar até ele; </li><br>
+							<li> Imaginemos a seguinte estrutura do site: </li>
+						</ul>
+
+					</section>
+					<section>
+						<h2> Caminho relativo </h2>
+
+					<pre><code contenteditable>
+http://www.medeiros.com
+		index.html
+		contato.html
+		sistemas
+		      sigai
+		        index.jsp
+		        cadastro.html
+		        consulta.html  
+		      sicon
+		        index.php
+		imagens
+		      background.jpg
+		      logo.jpg
+		      foto.jpg
+					</code></pre>
+
+					</section>
+				</section>
+
+				<section>
+
+					<h2> Tag < iframe > </h2>
+
+					<ul>
+						<li> Bastante prática porque permite a criação de uma janela em qualquer parte da página HTML; </li>
+						<li> Basta adicionar o código abaixo onde se deseja inserir uma janela: </li>
+					</ul>
+
+					<pre><code contenteditable>
+< ! DOCTYPE html >
+< html >
+   < head >
+      < title > Tag iframe < / title >
+   < / head >
+   < body >
+      < iframe src= "http://ifrn.edu.br" name= "corpo" id="corpo" style="width:100%; height:300px; border:0"> < / iframe >
+   < / body >
+< / html >
+
+					</code></pre>
+
+					</section>
+
+				<section>
+					<section>
+						<h2> Tag < div > </h2>
+
+						<ul>
+							<li> Bastante utilizada para definir uma divisão ou uma seção em um documento HTML; </li><br>
+							<li> A tag < div > é usada para agrupar elementos em blocos e formatá-los com CSS; </li><br>
+							<li> Normalmente, os browsers colocam uma linha em branco antes e depois da tag < div >. </li>
+						</ul>
+
+					</section>
+					<section>
+						<h2> Exemplo </h2>
+
+					<pre><code contenteditable>
+< body >
+
+  < div id="topo" style="position:absolute; left:0%; top:0%; width:100%; height:20%; z-index:1; background-color: #FFFFCC; border: none; overflow: auto;">
+      < h1 style="text-align:center">Aqui será colocado um logotipo < / h1 >
+  < / div>
+
+  < div id="esquerda" style="position:absolute; left:0%; top:20%; width:10%; height:80%; z-index:2; background-color: #FFCC99; overflow: auto;">
+        < !-- target= "corpo" exibirá as páginas no iframe "corpo" -->
+        < a href = "http://www.ufrn.br" target="corpo">UFRN < / a > < br /> 
+        < a href = " http://www.uern.br " target="corpo">UERN < / a >  
+  < / div >
+
+  < div id="principal" style="position:absolute; left:10%; top:20%; width:90%; height:80%; z-index:3; background-color: #FF9900; border: none; overflow: auto;">
+         < iframe src="http://www.ifrn.edu.br" name="corpo" id="corpo" style="width:100%;height:97%;border:0"> < / iframe >
+  < / div >
+< / body >
+					</code></pre>
+
+					</section>
+				</section>
+
+				<section>
+
+					<h2> Tag < span >  </h2>
+
+					<ul>
+						<li> Quando um texto é vinculado ao elemento <span> é possível adicionar estilos ao conteúdo ou manipular o conteúdo: </li>
+					</ul>
+
+					<pre><code contenteditable>
+< ! DOCTYPE html>
+< html >
+  < head >
+  < / head >
+  < body >
+    < p style="color:green" >
+      Este parágrafo é escrito em verde. Porém, a partir do uso da tag SPAN 
+      duas palavras tiveram suas cores alteradas: < br > < br >
+   	< span style="color:red;font-weight:bold">Vermelha< / span > < br >
+    < span style="color:blue;font-weight:bold">Azul < / span > 
+    < / p >
+  < / body >
+< / html >
+					</code></pre>
+
+					</section>
+
+				<section data-state="soothe" style="margin-top: 15%">
+					<section>
+						<h1> HTML </h1>
+						<h3> Tags HTML - Parte II </h3>
+						<p>
+						<br>
+						<small style="margin-top: 5%;"> Sumário:
+        						<a href="html.html#"> Introdução a HTML </a> |
+        						<a href="html.html#/4"> Tags HTML - Parte I </a> |
+        						<a href="html.html#/23"> Tags HTML - Parte II </a> |
+        						<a href="html.html#/34"> Formulários HTML </a>
+      					</small>
+						</p>
+
+					</section>
+				</section>
+
+				<section>
+
+					<h2> Tag < article > e < section > </h2>
+
+					<ul>
+						<li> São tags semânticas que definem um artigo e uma seção dentro de uma página; </li>
+					</ul>
+
+					<pre><code contenteditable>
+   < article >
+     < section >
+       < h2 > Introdução < / h2 >
+         < p style="text-align:justify"> 
+           A Web Mining está relacionada com vários outros domínios do 
+           conhecimento e consiste na extração de padrões de navegação 
+           considerados interessantes, bem como na identificação de 
+           informações implícitas nos recursos WWW. Diversas pesquisas 
+           vêm sendo realizadas nessa área que, por isso, vem se tornando 
+           bastante promissora e uma das mais importantes da Ciência da 
+           Computação e da Informação (Pamnani & Crawan, 2010), sendo 
+           classificada em 03 (três) categorias: Web Content Mining, 
+           Web Structure Mining e Web Usage Mining.< / p >
+     < / section >
+   < / article >
+					</code></pre>
+
+					</section>
+
+				<section>
+
+					<h2> Tag < figure > e < figcaption > </h2>
+
+					<ul>
+						<li> A tag < figure > é usada para marcar uma imagem dentro do documento; </li>
+						<li> Já a tag < figcaption > é usada para adicionar uma legenda ao elemento < figure >. </li>
+					</ul>
+
+					<pre><code contenteditable>
+< body >
+     < figure >
+           < img src= "img/logoIFRN.jpg" alt="Insituto Federal do RN" 
+           width="304" height="228" / >
+           < figcaption > Foto: IFRN < / figcaption >
+     < / figure >
+< / body >
+					</code></pre>
+
+					</section>
+
+				<section>
+
+					<h2> Tag < header > </h2>
+
+					<ul>
+						<li> Tag semântica que define uma introdução ou um grupo de elementos de navegação para um documento; </li>
+						<li> Pode conter títulos, subtítulos, informações de versão, etc; </li>
+						<li> Não pode ser colocada dentro das tags < footer >, < address > ou outro elemento < header >. </li>
+					</ul>
+
+					<pre><code contenteditable>
+< body link="white" vlink="white">
+     < header style="text-align:left">
+	   < div id="cabecalho" style="position:absolute; left:2%; top:0%; 
+            width:96%; height:26%; z-index:1; background-color: #009900;">
+               < figure >
+                 < img src= "img/logoIFRN.jpg" alt= "Logototipo do IFRN" 
+                    width="300" height= "124" />
+               < / figure >
+        < / div > 
+     < / header >  
+< / body >
+					</code></pre>
+
+					</section>
+
+				<section>
+
+					<h2> Tag < footer > </h2>
+
+					<ul>
+						<li> Como o nome sugere, a tag < footer > define um rodapé; </li>
+						<li> Normalmente, contém o autor do documento, informações de copyright, links para os termos de uso, informações de contato, etc; </li>
+					</ul>
+
+					<pre><code contenteditable>
+< body link="white" vlink="white">
+    . . .
+    < footer style="color:white;text-align:center;font-family:Arial;
+                                   font-size:10pt">
+       < div id="rodape" style="position:absolute; left:2%; top:97%; 
+                                                 width:96%; height:3%; z-index:2; 
+                                                 background-color: #009900;">
+           < b > Instituto Federal de Educação, Ciência e Tecnologia do Rio
+                  Grande do Norte < / b >
+       < / div >
+    < / footer >   
+< / body >
+					</code></pre>
+
+					</section>
+
+				<section>
+
+					<section>
+
+					<h2> Tag < nav > </h2>
+
+					<ul>
+						<li> Tag semântica Define uma seção de links de navegação; </li>
+						<li> Nem todos os links de um documento devem estar na tag < nav >, apenas os principais; </li>
+					</ul>
+
+					<pre><code contenteditable>
+ < nav >
+        < a href="pag1.html"> Página 1 < / a > < br />
+        < a href="pag2.html"> Página 2 < / a > < br />
+        < a href="pag3.html"> Página 3 < / a >
+< / nav >   
+					</code></pre>
+
+					</section>
+
+					<section>
+						
+						<h2> Exemplo </h2>
+
+					<pre><code contenteditable>
+< body link="white" vlink="white" >
+  . . .
+  < nav style="color:white;text-align:center;font-family:Arial; font-size:10pt" >
+      < div id= "links" style="position:absolute; left:33%; top:22%; width:35%; height:4%; z-index:3; background-color: #009900; overflow: auto;">
+
+        < a style="text-decoration:none;" target = "_blank" href="http://portal2.ifrn.edu.br/apodi"> Apodi < / a > |
+        < a style="text-decoration:none;" target = "_blank" href="http://portal2.ifrn.edu.br/caico">Caicó< / a > |
+	< a style="text-decoration:none;" target = "_blank" href="http://portal2.ifrn.edu.br/natalcentral"> Natal Central < / a > |
+	< a style="text-decoration:none;" target = "_blank" href="http://portal2.ifrn.edu.br/parnamirim"> Parnamirim < / a > |
+        < a style="text-decoration:none;" target = "_blank" href="http://portal2.ifrn.edu.br/santacruz"> Santa Cruz < / a >
+
+      < / div >
+  < / nav >   
+< body >
+
+					</code></pre>
+
+					</section>
+
+				</section>
+
+				<section>
+					<section>
+
+						<h2> Tag < video > </h2><br>
+
+						<li> Formatos de vídeos suportados pelos browsers: </li>
+
+						<img width="800" height="326" src="images/video.png" alt="video">
+
+					</section>
+
+					<section>
+
+						<h2> Exemplo </h2>
+
+					<pre><code contenteditable>
+
+< ! DOCTYPE html >
+  < html >
+    < head >
+       < title > Tag Video < / title >
+       < meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    < / head >
+    < body >
+         < div id= "video" style="position:absolute; left:10%; top:26%; width:20%; height:40%; z-index:4; overflow: auto;">		
+            < video width="100%" height="98%" controls="true" poster="img/logoIFRN.jpg">
+                 < source src= "video/videoIFRN.ogg" type="video/ogg" />        		   
+                 Este browser não dá suporte a este formato de vídeo
+          < / video >
+         < / div >
+    < / body >
+< / html >
+
+					</code></pre>
+
+					</section>
+
+					<section>
+
+						<h2> Adicionar vídeos do Youtube </h2>
+
+						<ol>
+							<li> Acesse um vídeo (por exemplo): https://www.youtube.com/watch?v=NnEaw74Pnvs </li><br>
+							<li> Clique no link Compartilhar; </li><br>
+							<li> Clique no botão Incorporar; </li><br>
+							<li> Copie o link gerado e adicione no seu site: </li>
+						</ol>
+
+					<pre><code contenteditable>
+< body >
+   < iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/NnEaw74Pnvs" 
+        frameborder="0" allowfullscreen>
+   < / iframe >
+< / body >
+					</code></pre>
+
+					</section>
+				</section>
+
+				<section>
+					<section>
+
+						<h2> Tag < audio > </h2><br>
+
+						<li> Formatos de áudios suportados pelos browsers: </li>
+
+						<img width="800" height="326" src="images/audio.png" alt="video">
+
+					</section>
+
+					<section>
+
+						<h2> Tag < audio > </h2>
+
+						<li> Na tag <body> da página com a música do Jorge Vercilo, adicione o seguinte código: </li>
+
+					<pre><code contenteditable>
+. . .
+   < div id= "audio" style="color:#009900; text-align:center; position:absolute; left:76%; top:70%; width:22%; height:20%; z-index:5; overflow: auto;">	
+
+      < audio controls>
+
+            < source src= "audio/cigano.ogg" type= "audio/ogg" /> 
+
+      < / audio >
+
+      Clique no botão < b > Play < / b > e ouça Apesar de Cigano,  Jorge Vercilo.
+
+   < / div >
+. . .
+					</code></pre>
+
+					</section>
+				</section>
+
+				<section>
+
+					<h2> Tag < script > </h2>
+
+					<li> Exemplo de menu popup usando < script > </li>
+
+				<pre><code contenteditable>
+< ! DOCTYPE html >
+< html >
+   < head >
+     < script type="text/javascript">
+         function abre_janela(url){
+	      janela=window.open(url,"","width=250,height=350,scrollbars=no");
+         }
+     < / script >
+   < / head >
+< body >
+   Clique aqui para o site do IFRN em  uma janela 
+      < a href="javascript:abre_janela('http://portal.ifrn.edu.br/')">
+         popup
+      < / a >
+< / body >
+< / html >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Tag < hgroup > </h2>
+
+					<li> A tag < hgroup > é semântica e usada para agrupar um conjunto de elementos < h1 >, < h2 >, ... quando um cabeçalho possui múltiplos níveis. </li>
+
+				<pre><code contenteditable>
+< ! DOCTYPE html >
+< html >
+   < head >
+      < title > Tag hgroup < / title >
+  < / head >
+   < body >
+      < hgroup >
+        < h1 > Seja bem-vindo ao nosso site < / h1 >
+        < h2 > Aqui você encontrará dicas sobre autoria web < / h2 >
+      < / hgroup >
+   < / body >
+< / html >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<section>
+
+					<h2> Tags < table > e complementares </h2>
+
+					<ul>
+						<li> As tabelas são bastante usadas pelo designer de uma home-page. Com elas é possível fazer alinhamentos que, dificilmente, seriam possíveis com simples comandos; </li>
+						<li> A tag para inserção de uma tabela é a < table >; </li>
+						<li> A tag < th > adiciona cabeçalhos: Table Header; </li>
+						<li> A tag < tr > inicia uma linha: Table Row; </li>
+						<li> A tag < td > inicia uma coluna: Table Data; </li>
+						<li> A tag < caption > define uma legenda; </li>
+						<li> As tags < thead >, < tfoot > e < tbody >  são usadas para delimitar o cabeçalho, o rodapé e o corpo de uma tabela, respectivamente. </li>
+					</ul>
+
+					</section>
+
+					<section>
+						
+					<h2> Exemplo </h2>
+
+				<pre><code contenteditable>
+	< table border="1"> < !-- Espessura 1 -->
+	    < caption > Resumo das despesas < / caption >
+	    < thead > < !-- Cabeçalho da tabela -->
+	      < tr >
+	         < th > Despesa < / th >
+	         < th > Valor < / th >			
+	      < / tr >
+	    < / thead >
+	    < tbody style="text-align:left"> < !-- Corpo da tabela -->
+	       < tr >
+	         < td > Combustível < / td >
+	         < td > R$ 290,00 < / td >			
+             < / tr >
+	    < / tbody >  
+	    < tfoot style="text-align:left"> < !-- Rodapé alinhado à esquerda -->
+	       < tr >
+	         < th > Total: < / th >
+	         < th > R$ 290,00 < / th >			
+	       < / tr >
+	    < / tfoot >
+	< / table >
+				</code></pre>
+
+					</section>
+
+					<section>
+						
+					<h2> Mesclando colunas </h2>
+
+				<pre><code contenteditable>
+< !--Mesclagem de colunas -->
+< table border=1 width="15%" >
+  < tbody >
+    < tr style="text-align:center" >
+      < td colspan=2 > Professores < / td >
+    < / tr >
+    < tr >
+      < td width="10%">Fábio Procópio < / td >
+	 < td width="5%" style="text-align:right"> João < / td >
+    < / tr >			 
+  < / tbody >
+< / table >
+				</code></pre>
+
+				<li> Resultado: </li>
+
+				<img width="200" height="100" src="images/colunas.png" alt="coluna">
+
+					</section>
+
+					<section>
+						
+					<h2> Mesclando linhas </h2>
+
+				<pre><code contenteditable>
+< !-- Mesclagem de linhas -->
+< table border=1 width="15%" >
+  < tbody >
+    < tr >
+      < td rowspan=2> Professores < / td >
+      < td > Fábio < / td >				
+    < / tr >
+    < tr >				
+      < td > João < / td >
+    < / tr >						
+  < / tbody >
+< table >	
+				</code></pre>
+
+				<li> Resultado: </li>
+
+				<img width="200" height="100" src="images/linhas.png" alt="coluna">
+
+					</section>
+
+				</section>
+
+				<section data-state="soothe" style="margin-top: 15%">
+					<section>
+						<h1> HTML </h1>
+						<h3> Formulários HTML </h3>
+						<p>
+						<br>
+						<small style="margin-top: 5%;"> Sumário:
+        						<a href="html.html#"> Introdução a HTML </a> |
+        						<a href="html.html#/4"> Tags HTML - Parte I </a> |
+        						<a href="html.html#/23"> Tags HTML - Parte II </a> |
+        						<a href="html.html#/34"> Formulários HTML </a>
+      					</small>
+						</p>
+
+					</section>
+				</section>
+
+				<section style="margin-top: 15%;">
+					<section>
+						<h2> O que são Formulários? </h2>
+							<br>
+						<p>
+							Os formulários são estruturas que permitem aos usuários submeterem dados a uma página;  
+						</p>
+
+					</section>
+					<section>
+						<h2> Qual a utilidade? </h2>
+							<br>
+						<p> 
+							São bastantes utilizados para realizar buscas e/ou introduzir dados pessoais; 
+						</p>
+					</section>
+					<section>
+						<h2> Como usar? </h2>
+							<br>
+						<p> 
+							Os formulários são delimitados pelas tag < form > .
+						</p>
+					</section>					
+				</section>
+
+				<section>
+
+					<section>
+
+					<h2> Atibutos </h2>
+
+						<p> Action - Define a ação que será realizada sobre o formulário. São duas: </p>
+							<li> formulário enviado a um endereço de e-mail: </li>
+
+					<pre><code contenteditable>
+< body >
+   < form action = "mailto:endereco@correio.com" ... > 
+< / body >
+					</code></pre>
+
+							<li> formulário enviado a um programa/script que processa o conteúdo: </li>
+
+					<pre><code contenteditable>
+< body >
+   < form action = "enderecoArquivo" ... > 
+< / body >
+
+					</code></pre>
+
+					</section>
+
+					<section>
+
+					<h2> Atibutos </h2>
+
+						<p> Method – especifica a forma como o formulário será enviado. São dois: </p>
+							<li> get – as variáveis são passadas pela URL para a página destino: </li>
+
+					<pre><code contenteditable>
+< form action = "mailto:ze@yahoo.com.br" method = "get" > ... < / form >
+					</code></pre>
+
+							<li> post – as variáveis são passadas de uma forma transparente para o usuário. Por conta disso, POST é o método mais  recomendado: </li>
+
+					<pre><code contenteditable>
+< form action = "http://www.ifrn.edu.br" method = "post" > ... < / form >
+					</code></pre>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<section>
+
+					<h2> Métodos de envio: GET e POST </h2>
+
+							<li> Ambos cumprem a mesma tarefa (obter os dados de um formulário e enviá-los a um servidor web), mas de maneiras diferentes; </li>
+							<li> GET empacota as variáveis do formulário, porém as variáveis são anexadas no final da URL antes de enviá-las para o servidor: </li>
+
+					<pre><code contenteditable>
+http://www.procopio.com.br/sucesso.html?<b>txtLogin=ifrn&txtSenha=123456</b>
+					</code></pre>
+
+							<li> POST também empacota as variáveis, mas faz o envio de forma oculta para o servidor: </li>
+							
+					<pre><code contenteditable>
+http://www.procopio.com.br/sucesso.html
+					</code></pre>
+
+					</section>
+
+					<section>
+						
+						<h2> Métodos de envio: GET  e POST </h2>
+
+						<p> GET </p>
+							<li> Não deve ser usado para informações case sensitive; </li>
+							<li> Há limitações de tamanho. </li><br>
+
+						<p> POST </p>
+							<li> Sem limitações de tamanho; </li>
+							<li> Não exibe os campos submetidos. </li><br>
+
+						<p> [W3C, 2017]</p>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<h2> Tag < label > </h2>
+
+					<li> Define um rótulo (uma etiqueta) para um elemento input; </li>
+
+				<pre><code contenteditable>
+< form action = "confirmacao.html" method="post" name= "cadastro" >
+   < table >	
+     < tr >
+       < td > < label for= "txtLogin" > Login: < / label > < / td >
+     < /tr >
+   < / table >	
+< / form >
+				</code></pre><br>
+
+				<p> Observação: Usaremos a tag table para auxiliar o alinhamento dos formulários. </p>
+				</section>
+
+				<section>
+
+					<h2> Input: Text e Password </h2>
+
+					<li> Os elementos < input > text e password são usados para a entrada de uma linha de texto; </li>
+					<li> O atributo autofocus indica que o campo deve receber o foco quando a página for carregada: </li>
+
+				<pre><code contenteditable>
+< table >	
+     < tr >
+       < td > < label for= "txtLogin" > Login: < / label > < / td >
+       < td > < input type="text" name= "txtLogin" id="txtLogin" size= "8" maxlength = "5" value="ifrn"> < / td >
+     < / tr >
+     < tr >
+       < td > < label for= "txtSenha"> Senha: < / label > < / td >
+       < td > < input type="password" name="txtSenha" value="" autofocus> < / td >
+     < / tr >      
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Input: Radio </h2>
+
+					<li> O elemento < input > radio cria um controle único com vários opções, porém apenas um deles poderá ser escolhido a cada vez: </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+    < tr >
+       < td > < label for="sexo"> Sexo: < / label > < / td >
+       < td >
+         < input type="radio" name="opSexo" value="M" checked="checked"> Masculino
+         < input type="radio" name="opSexo" value="F"> Feminino 
+       < / td >
+    < / tr >      
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Input: Checkbox </h2>
+
+					<li> O elemento < input > checkbox cria um controle de verificação que pode estar marcado ou não: </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+    < tr >
+      < td > < label for="formacao"> Formação: < / label > < / td >
+      < td >
+        < input type="checkbox" name="chkLic" value="L"> Licenciado
+        < input type="checkbox" name="chkBel" value= "B" checked="checked"> Bacharel
+      < / td >
+    < / td >      
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Input: File </h2>
+
+					<li> O elemento < input > file é usado para fazer uploads de arquivos: </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+   < tr >
+      < td > < label for=" upload "> Currículo: < / label > < / td >
+      < td > < input type="file" name="upload"> < / td >
+    < / tr >      
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Input: Hidden </h2>
+
+					<li> O elemento < input > hidden é um campo de entrada oculta: </li>
+
+				<pre><code contenteditable>
+
+< table >	
+    . . .
+   < tr >
+      < td > < label for=" upload "> Currículo: < / label > < / td >
+      < td > < input type="file" name="upload"> < / td >
+    < / tr >      
+    < input type="hidden" name="coPessoa" > 
+< / table >
+
+				</code></pre>
+
+				<ol>
+					<li> Usado pelo sistema web para identificação do usuário. </li>
+					<li> Usado para adicionar informações úteis ao sistema. </li>
+				</ol>
+
+				</section>
+
+				<section>
+
+					<h2> Input: Submit e Reset </h2>
+
+					<li> O elemento < input > submit define um botão que envia os dados do formulário para um servidor; </li>
+					<li> O elemento < input > reset define um botão que limpa os dados do formulário e atribui os seus valores padrões aos respectivos elementos: </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+    < tr >
+       < !-- Mescla duas colunas da tabela e centraliza -->
+       < td colspan="2" align="center"> 
+         < input type="submit" value="Enviar">
+         < input type= "reset" value="Limpar">
+       < / td >
+    < / tr >
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<section>
+
+					<h2> Input: Button </h2>
+
+					<li> O elemento < input > button dispara um evento JavaScript quando é acionado: </li>
+
+				<pre><code contenteditable>
+< head >
+	< title > Formularios - Email < / title >
+
+	< script type="text/javascriptn> 
+		function limpa() {
+			document.forms[ncadastron].reset(); } 
+	< / script >
+
+< style type="text/css">
+	.envia form {
+	background. url("img/enviar.png") no-repeat;
+	border: Opx;
+	cursor: pointer;
+	width: 100px;
+	height: 32px; } 
+
+	.limpa form {
+	background: url("img/cancelar.png") no-repeat;
+	border: Opx;
+	cursor: pointer;
+	width: 100px;
+	height: 32px; }
+
+< / style >
+
+< / head >
+				</code></pre>
+
+					</section>
+
+					<section>
+						
+						<h2> Input: Button </h2>
+
+						<li> O elemento < input > button dispara um evento JavaScript quando é acionado: </li>
+
+				<pre><code contenteditable>
+< form action = "confirmacao.html" method="post" name= "cadastro" >
+  . . .
+  < table >	
+    . . .
+    < tr >
+       < td colspan="2" align="center" > 
+         < input class="envia_form" type="submit" value="Enviar"/>
+         < input class="limpa_form" type="reset" value="Limpar"
+           onclick="limpa()" />
+       < /td>
+    < / tr >
+  < / table >
+< / form >
+				</code></pre>
+
+					</section>
+
+				</section>
+
+				<section>
+
+					<h2> Textarea </h2>
+
+					<li> O elemento < textarea > cria uma área de texto com mais de uma linha para digitação: </li>
+
+				<pre><code contenteditable>
+< table>	
+    . . .
+    < tr>
+       < td > < label for="obs"> Observação: < / label > < / td >
+       < td >
+          < textarea name="txtObs" rows="4" cols="30" > < / textarea >
+       < / td >
+    < / tr >
+    < !-- Deixe os botões Enviar e Cancelar na última linha da tabela-->
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Select </h2>
+
+					<li> O elemento < select > cria uma lista de opções: </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+    < tr >
+       < td > < label for="campus"> Campus: < / label > < / td >
+       < td >
+          < select name="cmbCampus">
+            < option value ="AP"> Apodi < / option >
+            < option value ="NAT"> Natal < / option >
+            < option value= "PA" selected> Parnamirim < / option >
+          < / select >
+       < / td >
+    < / tr >
+    < !-- Deixe os botões Enviar e Cancelar na última linha da tabela -->
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Fieldset e Legend </h2>
+
+					<li> Os elementos < fieldset > e < legend > criam uma borda (que contorna o formulário) e uma legenda, respectivamente; </li>
+					<li> A tag < form > deve ficar dentro de < fieldset > : </li>
+
+				<pre><code contenteditable>
+< fieldset >
+   < legend > Cadastro < / legend >
+   < form action = "confirmacao.html" method="post" name= "cadastro" >
+            . . .
+   < / form >
+< / fieldset >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Input: Email </h2>
+
+					<li> O elemento < input > email é um dos novos elementos do HTML5 e é usado em campos que devem conter endereços de e-mail; </li>
+					<li> O atributo required indica se o campo deve (ou não) ser preenchido obrigatoriamente; </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+    < tr >
+       < td > < label for="email"> E-mail: < / label > < / td >
+       < td > < input type="email" name="email" required/> < / td >
+    < / tr >
+    < !-- Deixe os botões Enviar e Cancelar na última linha da tabela -->
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Input: Url </h2>
+
+					<li> O elemento < input > url também é novo e é usado em campos que devem conter URLs; </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+    < tr >
+       < td > < label for="url"> URL: < / label > < / td >
+       < td > < input type="url" name="url"/> < / td >
+    < / tr >
+    < !-- Deixe os botões Enviar e Cancelar na última linha da tabela -->
+< / table >
+				</code></pre>
+
+				</section>
+
+				</section>
+
+				<section>
+
+					<h2> Input: Elementos de Data/Hora </h2>
+
+					<li> Os elementos < input > datetime, date, month, week, time e datetime-local permitem que o usuário selecione hora/data, data, mês, semana e hora/data locais, como os nomes sugerem; </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+    < tr >
+       < td > < label for="data"> Data: < / label > < / td >
+       < td > < input type="date" name="data"> < / td >
+    < / tr >
+    < !-- Deixe os botões Enviar e Cancelar na última linha da tabela -->
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Input: Number </h2>
+
+					<li> O elemento < input > number recebe valores numéricos e permite que sejam definidas restrições para quais valores são aceitos: </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+    < tr >
+       < td > < label for="filho"> Filhos: < / label > < / td >
+       < td >
+         < input type="number" name="filho" value="0" min="0" max= "10" step= "1">
+       < / td >
+    < / tr >
+    < !-- Deixe os botões Enviar e Cancelar na última linha da tabela -->
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Input: Range </h2>
+
+					<li> O elemento < input > range recebe valores que estão em uma faixa de valores: </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+    < tr >
+       < td > < label for="aval"> Avaliação(visual): < / label > < / td >
+       < td >
+          < input type="range" name="aval" value="0" min="0" max= "10" step= "1"/>
+       < / td >
+    < / tr >
+    < !-- Deixe os botões Enviar e Cancelar na última linha da tabela -->
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section>
+
+					<h2> Atributos Pattern e Placeholder </h2>
+
+					<li> O atributo pattern permite definir expressões regulares sem usar JavaScript. Já o placeholder um pequeno texto sobre o valor que deve ser atribuído a um campo: </li>
+
+				<pre><code contenteditable>
+< table >	
+    . . .
+    < tr >
+       < td > < label for="instituicao"> Instituição: < / label > < / td >
+       < td >
+        < input type="text" name=" instituicao" pattern=".{3,}" title= "Instituição deve ter pelos menos 3 caracteres." required placeholder="Instituição de ensino." />
+       < / td >
+    < / tr >
+    < !-- Deixe os botões Enviar e Cancelar na última linha da tabela -->
+< / table >
+				</code></pre>
+
+				</section>
+
+				<section data-state="soothe" style="margin-top: 15%">
+					
+					<h1> Parabéns! </h1><br>
+					<h3> Você concluiu o módulo HTML. </h3>
+
+					<a href="index.html"><img src="images/home.png" width="100" height="100"></a>
+				</section>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme,
+				transition: Reveal.getQueryHash().transition || 'default',
+
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

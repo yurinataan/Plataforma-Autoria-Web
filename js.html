@@ -1,0 +1,960 @@
+<!doctype html>
+<html lang="PT-BR">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title> JavaScript </title>
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/tema/padrao.css" id="tema">
+
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<div class="slides">
+				<section data-state="soothe" style="margin-top: 15%;">
+					<h1> JavaScript </h1>
+					<h3> Introdução à JavaScript </h3>
+					<p>
+						<br>
+						<small style="margin-top: 5%;"> Sumário:
+        						<a href="js.html#"> Introdução à JavaScript </a> |
+        						<a href="js.html#/10"> Estruturas Condicionais e de Repetição </a> |
+        						<a href="js.html#/19"> Funções e Objetos </a>
+      					</small>
+					</p>
+				</section>
+
+					<section>
+						<h2> História </h2><br>
+
+						<ul>
+							<li> JavaScript foi desenvolvida pela Netscape para trabalhar com aplicações interativas em páginas (X)HTML; </li>
+							<li> Depois do seu sucesso inicial, recebeu uma contribuição considerável da Sun Microsystems e, assim, é uma linguagem baseada em Java; </li>
+							<li> Suporta a maior parte das sintaxes e dos comandos da linguagem Java; </li>
+							<li> Uma das desvantagens é que suporta poucos tipos de dados e implementa apenas alguns conceitos de Orientação a Objetos; </li>
+						</ul>
+
+					</section>
+
+					<section>
+
+						<h2> Introdução </h2><br>
+
+						<ul>
+							<li> Javascript oferece rapidez no desenvolvimento e é a mais popular da Internet; </li>
+							<li> Projetada para adicionar interatividade nas páginas Web; </li>
+							<li> É uma linguagem de script, ou seja, pode ser invocada dentro de outras linguagens de programação; </li>
+							<li> Incorporada diretamente nas páginas HTML; </li>
+							<li> Importante: JavaScript não é Java!!! </li>
+						</ul>
+
+					</section>
+					<section>
+
+						<section>
+						<h2> Pág. estática Vs Pág. dinâmica </h2><br>
+
+						<ul>
+						<p> Página estática </p><br>
+
+						<li> Construídas usando apenas HTML; </li><br>
+						<li> Além dos links, possuem poucos efeitos e funcionalidades e; </li>
+						<li> Fáceis de serem criadas. </li>
+						</ul>
+						</section>
+
+						<section>
+						<h2> Pág. estática Vs Pág. dinâmica </h2><br>
+
+						<ul>
+						<p> Página dinâmica </p><br>
+
+						<li> Podem incluir qualquer tipo de efeito especial ou funcionalidade e; </li><br>
+						<li> É necessário utilizar outras linguagens de programação. </li>
+						</ul>
+						</section>
+					</section>
+
+					<section>
+						<h2> Aplicações em JavaScript </h2><br>
+
+						<ul>
+							<li> Criação de páginas com efeitos especiais e com interatividade; </li>
+							<li> Detecção do navegador do visitante; </li>
+							<li> Reação a eventos como resposta às ações do usuário; </li>
+							<li> Validação de dados; </li>
+							<li> Criação desde pequenos scripts, até programação orientados a objetos, com funções, estruturas de dados complexas e outras. </li>
+						</ul>
+					</section>
+
+					<section>
+						<h2> Algumas características </h2><br>
+
+						<ul>
+							<li> É case sensitive; </li>
+							<li> É fracamente tipada (ou dinamicamente tipada); </li>
+							<li> O navegador do cliente é o responsável por interpretar as instruções; </li>
+							<li> O ponto e vírgula: Opcional no final da marcação, e permite várias instruções na mesma linha. </li>
+						</ul>
+					</section>
+
+					<section>
+						<h2> Definição de um script </h2>
+
+					<pre><code contenteditable>
+< !DOCTYPE html>
+< html >
+   < head >
+     ...
+   < / head >
+   < body >
+   	< script type="text/javascript">
+   		document.write("Hello, world! < br > ");
+          document.write("< b > Olá, mundo! < / b >");
+      < / script >
+  < / body >
+ < / html >
+					</code></pre>
+
+					<li> document.write é um comando padrão do JavaScript para escrever uma saída na página HTML. </li>
+					</section>
+
+					<section>
+					<section>
+						<h2> Onde colocar o script? </h2>
+
+						<ul>
+							<li> Na tag < Head > será executado quando for chamado ou quando um evento for acionado e; </li>
+							<li> O script é carregado antes que alguém use. </li>
+						</ul>
+
+					<pre><code contenteditable>
+< !DOCTYPE html >
+< html >
+	< head >
+	< script type="text/javascript">
+	function mensagem() {
+        //Isto é um comentário
+        /*Isto também é um comentário*/
+    	alert("Caixa de alerta chamada pelo evento onload");
+			}
+		< / script >
+	< / head >
+	< body onload="mensagem();">
+	
+	< / body >
+< / html >
+					</code></pre>
+					</section>
+
+					<section>
+						<h2> Onde colocar o script? </h2>
+
+						<ul>
+							<li> Na tag < body > Pode ser executado quando a página é carregada na seção corpo e; </li>
+							<li> Gera o conteúdo de uma página. </li>
+						</ul>
+
+					<pre><code contenteditable>
+< !DOCTYPE html >
+< html >
+  < head >
+  < / head >
+  < body >
+    < script type="text/javascript">
+      document.write("Mensagem Javascript  escrita em BODY");
+    < / script >
+  < / body >
+< / html >
+					</code></pre>
+					</section>
+
+					<section>
+
+						<h2> Onde colocar o script? </h2>
+
+						<ul>
+							<li> Nas tag < Head > e < body > Podem ser colocados vários scripts. </li>
+						</ul>
+
+					<pre><code contenteditable>
+< !DOCTYPE html >
+< html >
+< head >
+	< script type="text/javascript">
+	function mensagem() {
+	alert("Caixa de alerta chamada pelo evento onload");
+}
+	< / script >
+< / head >
+< body onload ="mensagem()">
+    < script type="text/javascript">
+    document.write("Mensagem Javascript  escrita em BODY");
+	< / script >
+< / body >
+< / html >
+					</code></pre>
+					</section>
+
+					<section>
+						<h2> Onde colocar o script? </h2>
+
+						<ul>
+							<li> Para usar o mesmo JavaScript em várias páginas, o script pode ser colocado em um arquivo externo e a sua extensão deve ser .js; </li>
+							<li> O arquivo .js não tem a tag < script > ; </li>
+							<li> Para usar o arquivo externo: </li>
+						</ul>
+
+					<pre><code contenteditable>
+< !DOCTYPE html >
+< html >
+< head >
+      < meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >
+      < script type="text/javascript" src="meuScript.js" >
+      	...
+      < / script >
+  < / head >
+  < body onload="mensagem()" >
+  < / body >
+< / html >
+					</code></pre>
+					</section>
+					</section>
+
+					<section>
+						<h2> Declaração de variáveis </h2><br>
+
+						<ul>
+							<li> Utiliza-se o termo var (opcional) e os nomes devem começar com uma letra ou com um caractere sublinhado: </li>
+						</ul>
+
+					<pre><code contenteditable>
+var idade;
+var saudacao;
+					</code></pre>
+						<ul>
+							<li> Pode receber um valor já na declaração: </li>
+						</ul>
+
+					<pre><code contenteditable>
+var idade=5;
+var saudacao ="Olá!";
+					</code></pre>
+					</section>
+
+					<section>
+					<section>
+						<h2> Operador "+" </h2><br>
+
+						<ul>
+							<li> Quando usado entre strings, devolve uma string: </li>
+						</ul>
+
+					<pre><code contenteditable>
+< script type="text/javascript">
+      var res = "Oi, " + "José"; //Armazena a string "Oi, José"
+< / script >
+					</code></pre>
+						<ul>
+							<li> Quando usado entre strings e números, devolve uma string: </li>
+						</ul>
+
+					<pre><code contenteditable>
+< script type="text/javascript">
+      var res = "José" + 10; //Armazena a string "José10"
+< / script >
+					</code></pre>
+					</section>
+
+					<section>
+						<h2> Operador "+" </h2><br>
+
+						<ul>
+							<li> Quando usado entre números, devolve a soma entre eles: </li>
+						</ul>
+
+					<pre><code contenteditable>
+< script type="text/javascript" >
+      var res = 10 + 10; //Armazena o valor numérico 20
+< / script >
+					</code></pre>
+					</section>
+					</section>
+
+				<section data-state="soothe" style="margin-top: 15%">
+					<section>
+						<h1> JavaScript </h1>
+						<h3> Estruturas Condicionais e de Repetição </h3>
+						<p>
+						<br>
+						<small style="margin-top: 5%;"> Sumário:
+        						<a href="js.html#"> Introdução à JavaScript </a> |
+        						<a href="js.html#/10"> Estruturas Condicionais e de Repetição </a> |
+        						<a href="js.html#/19"> Funções e Objetos </a>
+      					</small>
+						</p>
+
+					</section>
+				</section>
+
+				<section>
+					<h2> Operadores de Comparação </h2><br>
+
+					<img width="700" height="300" src="images/comparacao.png" alt="comparação">
+				</section>
+
+				<section>
+					<h2> Operadores lógicos </h2><br>
+
+					<img width="700" height="200" src="images/logica.png" alt="logica">
+				</section>
+
+				<section>
+				<section>
+					<h2> Operador condicional </h2><br>
+
+					<li> Sintaxe: </li>
+					<pre><code contenteditable>
+nomeVariavel = (condição) ? valor1 : valor2;
+					</code></pre><br>
+
+					<li> Exemplo: </li>
+					<pre><code contenteditable>
+resultado = (idade >= 18) ? "MAIORIDADE" : "MENORIDADE";
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Operador condicional composta </h2>
+
+					<li> Sintaxe: </li>
+					<pre><code contenteditable>
+if (condição) {
+    //código que será executado se a condição for verdadeira
+}
+else {
+//código que será executado se a condição for falsa
+}
+					</code></pre>
+
+					<li> Exemplo: </li>
+					<pre><code contenteditable>
+var idade = 20;
+if (idade >= 18) {
+    document.write("MAIORIDADE");
+}
+else {
+document.write("MENORIDADE");
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Operador condicional alinhada </h2>
+
+					<li> Sintaxe: </li>
+					<pre><code contenteditable>
+if (condicao_01) {
+    //código que será executado se condicao_01 for verdadeira
+}
+
+else 
+    if (condicao_02){
+    // código que será executado se condicao_02 for verdadeira
+}
+
+else {
+  // código que será executado se condicao_01 e condicao_02 forem falsas
+}
+					</code></pre>				
+				</section>
+				</section>
+
+				<section>
+					<h2> Switch </h2>
+
+					<li> Sintaxe: </li>
+					<pre><code contenteditable>
+switch (nomeVariavelAnalisada) {
+case 1:
+    //executa codigo do bloco 1
+    break;
+
+    case 2 :
+    //executa codigo do bloco 2
+    break;
+
+    default:
+    codigo para ser executado se nomeVariavel é diferente do caso 1 e 2
+}
+
+					</code></pre>				
+				</section>
+
+				<section>
+					<h2> Estrutura de repetição: For </h2><br>
+
+					<li> Sintaxe: </li>
+					<pre><code contenteditable>
+for (nomeVar=valorInicial; nomeVar <= valorFinal; nomeVar = nomeVar + inc) {
+    //código a ser executado
+}
+					</code></pre><br>
+
+					<li> Exemplo: </li>
+					<pre><code contenteditable>
+for (i=1; i <= 10; i++) {
+    document.write("i = " + i + "<br>");
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Estrutura de repetição: While</h2><br>
+
+					<li> Sintaxe: </li>
+					<pre><code contenteditable>
+while (condicaoParada) {
+    //código a ser executado
+}
+					</code></pre><br>
+
+					<li> Exemplo: </li>
+					<pre><code contenteditable>
+i = 1;
+while (i <= 10) {
+    document.write("i = " + i + "<br>");
+    i++;
+}
+					</code></pre>
+				</section>
+
+				<section>
+
+					<h2> Comando Break </h2><br>
+
+					<ul>
+						<li> Usado para forçar a finalização da execução de um laço; </li>
+						<li> Imagine o seguinte cenário: um professor deseja fazer um sorteio em uma turma de 100 alunos, porém o aluno com a matrícula 30 evadiu-se. </li>
+					</ul>
+
+					<pre><code contenteditable>
+do {
+    //código a ser executado
+}
+while (condicaoParada);
+					</code></pre>
+
+				</section>
+
+				<section>
+				<section>
+					<h2> Arranjos </h2><br>
+
+					<li> Arranjos são usados para armazenar múltiplos valores em uma única variável. </li>
+
+					<pre><code contenteditable>
+var cars = ["Saab", "Volvo", "BMW"]
+var cars = new Array("Saab", "Volvo", "BMW");
+					</code></pre>
+
+					<li> Acessando um arranjo </li>
+					<pre><code contenteditable>
+document.getElementById("demo").innerHTML = cars[0];
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Arranjos </h2><br>
+
+					<li> Arranjos são objetos e possuem métodos. </li>
+
+					<pre><code contenteditable>
+var cars = new Array("Saab", "Volvo", "BMW");
+var x = cars.length; // Retorna o número de elementos
+var y = cars.sort(); // Ordena o arranjo
+					</code></pre>
+
+					<li> Acessando um arranjo </li>
+					<pre><code contenteditable>
+< script >
+ var fruits = ["Banana", "Orange", "Apple", "Mango"]; 
+ document.write("Tamanho:"+fruits.length+"< br >");
+ document.write(fruits+"< br >");
+ fruits.sort();
+ document.write(fruits+"< br >");
+< / script >
+					</code></pre>	
+				</section>
+
+				<section>
+					<h2> Arranjos </h2><br>
+
+					<li> Adicionando um novo elemento: </li>
+
+					<pre><code contenteditable>
+array[array.length] = "item";
+					</code></pre>		
+				</section>
+				</section>
+
+				<section data-state="soothe" style="margin-top: 15%">
+					<section>
+						<h1> JavaScript </h1>
+						<h3> Funções e Objetos </h3>
+						<p>
+						<br>
+						<small style="margin-top: 5%;"> Sumário:
+        						<a href="js.html#"> Introdução à JavaScript </a> |
+        						<a href="js.html#/10"> Estruturas Condicionais e de Repetição </a> |
+        						<a href="js.html#/19"> Funções e Objetos </a>
+      					</small>
+						</p>
+
+					</section>
+				</section>
+
+				<section>
+					<h2> Caracteres Especiais </h2><br>
+
+					<img width="700" height="300" src="images/caracteres.png" alt="caracteres">
+				</section>
+
+				<section>
+					<section>
+						<h2> Funções </h2><br>
+
+						<ul>
+							<li> Uma função contém código que será executada por um evento ou por uma chamada a ela; </li>
+							<li> Pode chamar uma função de qualquer lugar da página (ou de outras páginas se a função estiver em um arquivo externo .js); </li>
+							<li> Podem ser definidas no < head > e na seção < body >; </li>
+							<li> Colocando no <head> garante que ela seja carregada no browser antes de ser chamada; </li>
+						</ul>
+					</section>
+
+					<section>
+						<h2> Exemplo </h2><br>
+
+						<li> Na tag < head >, copie e cole o código abaixo: </li>
+						<pre><code contenteditable>
+< script type="text/javascript">
+    function mostraMensagem(){
+        alert("Evento onclick do botão foi disparado!");
+    }		
+< / script >
+						</code></pre><br>
+
+						<li> Na tag < body >, copie e cole o código abaixo: </li>
+						<pre><code contenteditable>
+< form >
+    < input type="button" value="Evento onclick" onclick="mostraMensagem()" >
+< / form >
+						</code></pre>						
+					</section>
+				</section>
+
+				<section>
+					<h2> Declaração Return </h2>
+
+					<li> Essa declaração é usada para especificar um valor a ser retornado pela função: </li>
+					<pre><code contenteditable>
+< !DOCTYPE html >
+< html >
+  < head >		
+    < title > Funções < / title >
+    < meta http-equiv="Content-Type" content="text/html; charset=UTF-8" >    	
+    < script type="text/javascript" >
+       function calculaSoma(n1, n2, n3) {
+          return n1 + n2 + n3;
+       }
+    < / script >
+  < / head >
+  < body >
+     < script type="text/javascript" >
+         document.write("Soma = " + calculaSoma(2, 3, 0.5));
+     < / script >    
+  < / body >
+< / html >
+					</code></pre>	
+				</section>
+
+				<section>
+					<h2> Funções de conversão </h2><br>
+
+					<ul>
+						<li> parseInt("umaString"): recebe um valor do tipo string, converte-o e devolve-o como um int; </li>
+						<li> parseFloat("umaString"): recebe um valor do tipo string, converte-o e devolve-o como um float; </li>
+						<li> Na tag < body >, copie e cole o código abaixo: </li>
+					</ul>
+
+					<pre><code contenteditable>
+< script type="text/javascript" >
+        var n1 = "2";
+        var n2 = "3";
+        var n3 = "0.5";
+        var soma = n1 + n2 + n3;
+        document.write("Soma = " + soma);
+        soma = parseInt(n1) + parseInt (n2) + parseFloat(n3);
+        document.write("< br >Soma = " + soma);
+< / script >
+
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Alert Box </h2><br>
+
+					<ul>
+					<li> Utilizado para mostrar uma informação de alerta ao usuário: </li>
+					<li> Na tag < head > :</li>
+					</ul>
+
+					<pre><code contenteditable>
+< script type="text/javascript">
+    function mostraAlert(){
+        alert("Olá! Eu sou um Popup Box Alert!");
+    }		
+< /  script >
+					</code></pre><br>
+				</section>
+
+				<section>
+					<h2> Confirm Box </h2><br>
+
+					<ul>
+					<li> Utilizado geralmente quando o usuário precisa verificar ou aceitar alguma coisa: </li>
+					<li> Na tag < head > :</li>
+					</ul>
+
+					<pre><code contenteditable>
+< script type="text/javascript" >
+  function mostraConfirm(){
+     var resp = confirm("Deseja continuar no site?");
+     if (resp == true)
+         alert("Obrigado por continuar no nosso site.");
+     else
+         alert("Obrigado por sua visita!");				
+  }
+< / script >
+					</code></pre><br>
+				</section>
+
+				<section>
+					<h2> Prompt Box </h2><br>
+
+					<ul>
+					<li> Utilizado quando é necessário que o usuário insira um valor: </li>
+					<li> Na tag < head > :</li>
+					</ul>
+
+					<pre><code contenteditable>
+function mostraPrompt(){
+   var nome = prompt("Digite seu nome: ", "(Nome)");
+   alert("Olá, " + nome + "! ");
+}
+					</code></pre><br>
+				</section>
+
+				<section>
+					<section>
+						<h2> Objeto String </h2><br>
+
+						<li> Objetos string são usados para armazenar e manipular textos e pode ser criados de duas formas: </li>
+						<pre><code contenteditable>
+var nome1 = new String("José");
+var nome2 = "Carlos";
+						</code></pre><br>
+
+						<li> Uma string pode ser qualquer texto entre aspas simples ou dupla: </li>
+						<pre><code contenteditable>
+var nome3 = "André";
+var nome4 = 'Ana';
+						</code></pre>					
+					</section>
+
+					<section>
+						<h2> Objeto String </h2><br>
+
+						<li> É possível acessar cada um dos caracteres de uma string: </li>
+						<pre><code contenteditable>
+var instituto = "IFRN";
+alert(instituto[0] + instituto[1]); //Mostra a substring IF
+						</code></pre><br>
+
+						<li> length é uma propriedade usada para obter o tamanho de uma string: </li>
+						<pre><code contenteditable>
+alert("Tam. string: " + instituto.length); //Mostra o valor 4
+						</code></pre>					
+					</section>
+
+					<section>
+						<h2> Alguns métodos </h2><br>
+
+						<img width="700" height="400" src="images/string.png" alt="string">
+					</section>
+
+					<section>
+						<h2> Exemplos </h2>
+
+						<pre><code contenteditable>
+< script type="text/javascript" >		
+    var texto = "Instituto Federal de Educação Ciência e Tecnologia do RN";
+    document.write(texto + "< br >< br >");		
+
+    var textoTemp = texto.substring(4, 15);
+    document.write(textoTemp + "< br >< br >");		
+
+    var tamanho = texto.length;
+    document.write(tamanho + "< br >< br >");
+		
+    var textoTemp = texto.charAt(14);
+    document.write(textoTemp + "< br >< br >");				
+		
+    var textoTemp = texto.toLowerCase();
+    document.write(textoTemp + "< br >< br >");		
+		
+    var textoTemp = texto.toUpperCase();
+   document.write(textoTemp + "< br >< br >");		
+< / script >
+
+						</code></pre>							
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2> Objeto Math </h2><br>
+
+						<ul>
+						<li> Javascript oferece um conjunto de recursos matemáticos que estão disponíveis por meio do objeto Math; </li>
+						<li> Todas as propriedades e métodos podem ser invocados usando Math como um objeto, sem a necessidade de instanciá-la; </li><br>
+						<li> Sintaxe: </li>
+						</ul>
+
+						<pre><code contenteditable>
+	Math.nomePropriedade 
+	Math.nomeMétodo
+						</code></pre><br>
+					</section>
+
+					<section>
+						<h2> Alguns métodos </h2><br>
+
+						<img width="700" height="400" src="images/math.png" alt="string">
+					</section>
+
+					<section>
+						<h2> Exemplos </h2><br>
+
+						<pre><code contenteditable>
+< script type="text/javascript" >		
+   document.write("Math.abs(-1): " + Math.abs(-1) + "< br >")
+   document.write("Math.ceil(9.2): " + Math.ceil(9.2) + "< br >")
+   document.write("Math.floor(9.2): " + Math.floor(9.2) + "< br >")
+   document.write("Math.round(9.4): " + Math.round(9.4) + "< br >")
+   document.write("Math.min(1,2,3): " + Math.min(1,2,3) + "< br >")
+   document.write("Math.max(1,2,3): " + Math.max(1,2,3) + "< br >")
+   document.write("Math.pow(2,3): " + Math.pow(2,3) + "< br >")	
+   document.write("Math.sqrt(16): " + Math.sqrt(16) + "< br >")
+< / script >
+						</code></pre>							
+					</section>
+				</section>
+
+				<section>
+					<section>
+						<h2> Objeto Array </h2>
+
+						<ul>
+						<li> Há várias maneiras de se adicionar valores no Array: </li>
+						<li> Adicionando quantos valores precisar sem definir um tamanho previamente; </li><br>
+						</ul>
+
+						<pre><code contenteditable>
+var carros = new Array();
+carros[0] = "Civic";
+carros[1] = "Corolla";
+						</code></pre>
+
+						<ul>
+						<li> Definindo o tamanho do Array: </li>
+						</ul>
+
+						<pre><code contenteditable>
+var carros = new Array(2);
+carros[0] = "Civic";
+carros[1] = "Corolla";
+						</code></pre><br>						
+					</section>
+
+					<section>
+						<h2> Objeto Array </h2>
+
+						<ul>
+						<li> Adicionando na declaração: </li>
+						</ul>
+
+						<pre><code contenteditable>
+var carros=new Array("Civic","Corolla");
+						</code></pre>
+
+						<ul>
+						<li> Usando o método push: </li>
+						</ul>
+
+						<pre><code contenteditable>
+var carros=new Array();
+carros.push("Civic"); carros.push("Corolla");
+						</code></pre><br>						
+					</section>
+
+					<section>
+						<h2> Alguns métodos </h2><br>
+
+						<img width="700" height="400" src="images/array.png" alt="string">
+					</section>
+
+					<section>
+						<h2> Exemplos </h2><br>
+
+						<pre><code contenteditable>
+< script type="text/javascript" >		
+     var impares = new Array();
+     impares[0] = 1; impares[1] = 3; impares[2] = 5;
+	  
+     var pares = new Array();
+     pares.push(2); pares.push(4); pares.push(6);
+	  
+     document.write("Vetor PARES: " + pares.join("#") + "< br >");
+     document.write("Vetor ÍMPARES: " + impares.join("#") + "< br > < br >");
+     document.write("Concatenação dos 2 vetores: " + pares.concat(impares));
+     document.write("< br > Concatenação ordenada dos 2 vetores: " + 
+                                    pares.concat(impares).sort() + "< br > < br >");	  
+     document.write("Qual a posição do número 5 no vetor IMPARES? " + 
+                                    impares.indexOf(5) + " < br > < br >");
+     document.write("Removendo o último elemento do vetor PARES..." + "< br >");
+     document.write("Vetor ANTES da remoção:" + pares + "< br >");
+     pares.pop();
+     document.write("Vetor DEPOIS da remoção:" + pares + "< br > < br >");
+     document.write("< br > Removendo o primeiro elemento do vetor ÍMPARES...");
+     document.write("< br > Vetor ANTES da remoção:" + impares + "< br >");
+     impares.shift();
+     document.write("Vetor DEPOIS da remoção:" + impares + "< br > < br >");
+
+     document.write("Adicionando o número 10 na primeira posição de PARES... ");
+     pares.unshift(10);
+     document.write("< br >Vetor DEPOIS da inserção:" + pares + "< br > < br >");
+< / script >
+						</code></pre>							
+					</section>
+				</section>
+
+				<section>
+					<h2> Objeto Error </h2><br>
+
+					<ul>
+						<li> O objeto Error contém informações dos erros gerados durante a execução de um JavaScript; </li>
+						<li> A propriedade name retorna o nome do erro; </li>
+						<li> Já a propriedade message apresenta a descrição do erro gerado; </li>
+						<li> O método toString() concatena as informações geradas pelas propriedades name e message. </li>
+					</ul>
+				</section>
+
+				<section>
+					<h2> Tratamento de erros </h2>
+
+					<ul>
+						<li> Para realizar o tratamento de erros em JavaScript, podemos utilizar o bloco de instrução try/catch/finally: </li>
+					</ul>
+
+					<pre><code contenteditable>
+try {
+   //tentativa de execução de instruções suspeitas
+}
+
+catch (e) {
+    document.write(e.toString());
+    //document.write(e.name + " –> " + e.message);
+}
+
+finally {
+  //instrução que será executada independente de ocorrer erros
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> A palavra-chave throw </h2>
+
+					<ul>
+						<li> Permite que sejam criados erros customizados e, quando usada com try/catch, o fluxo do programa pode ser controlado. </li>
+					</ul>
+
+					<pre><code contenteditable>
+. . .
+< head >
+  < script type="text/javascript">
+     function trataErro() {
+        try {
+           var nome = prompt("Digite o seu nome: ", " "); 
+           if (nome.trim() === "")
+               throw "ERRO: Preencha seu nome."; 
+            document.write("Olá, " + nome + "!");
+        }
+        catch (e) {
+           document.write(e.toString());
+        }
+     }
+  < script >
+< / head >
+. . .
+					</code></pre>
+				</section>
+
+				<section>
+					<h2> Tipos de erros </h2><br>
+
+					<img width="700" height="400" src="images/error.png" alt="error">
+				</section>
+
+				<section data-state="soothe" style="margin-top: 15%">
+					
+					<h1> Parabéns! </h1><br>
+					<h3> Você concluiu o módulo JavaScript. </h3>
+
+					<a href="index.html"><img src="images/home.png" width="100" height="100"></a>
+				</section>
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+
+				theme: Reveal.getQueryHash().theme,	
+				transition: Reveal.getQueryHash().transition || 'default',
+
+				dependencies: [
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
