@@ -1,0 +1,155 @@
+{
+  "questions": [
+    {
+      "answers": [
+        "font = “blue” for h1",
+        "h1:color=blue",
+        "h1 {color:blue}",
+        "{h1}color:blue{/h1}"
+      ],
+      "correct": {
+        "index": 2,
+        "text": "Para estilizar um título, é necessário especificar a tag (H1, por exemplo), abrir chaves e definir o estilo."
+      },
+      "number": 1,
+      "prompt": "Para que um título H1 seja exibido na cor azul, o código CSS deve ser:"
+    },
+    {
+      "answers": [
+        "Incorporado",
+        "In-line",
+        "In-tag",
+        "CSS",
+        "Off-tag"
+      ],
+      "correct": {
+        "index": 1,
+        "text": "A formatação In-line acontece quando o usuário utiliza o CSS dentro da própria tag."
+      },
+      "number": 2,
+      "prompt": "Quando o programador deseja aplicar uma formatação na tag, esse processo é chamado de estilo..."
+    },
+    {
+      "answers": [
+        "< body style = 'back-color-type:blue'>",
+        "< body style = 'backcolor:blue'>",
+        "< body style = 'background-color:lightblue'>",
+        "< body style = 'background-color:#0000FF'>",
+        "< body style = 'backcolor:#88AAFF'>"
+      ],
+      "correct": {
+        "index": 2,
+        "text": "Para definir um background, ou seja, um plano de fundo, deve-se usar o background-color seguido pelo nome da cor, ou seu código RGB."
+      },
+      "number": 3,
+      "prompt": "Para deixar a página com o fundo azul claro, qual tag deve ser inserida?"
+    },
+    {
+      "answers": [
+        "< a href='pagina.html'>< / a>",
+        "< a='pagina.html'>< / a>",
+        "< href a='pagina.html'>< / a>",
+        "< a href=pagina_html>< / a>",
+        "< href='pagina.html'>< / a>"
+      ],
+      "correct": {
+        "index": 0,
+        "text": "O padrão para criar links em sua página web sempre seguirá a mesma estrutura: < a >, href e o destino."
+      },
+      "number": 4,
+      "prompt": "Para criar um link entre uma página e outra, usa-se a tag:"
+    },
+    {
+      "answers": [
+        "Criação",
+        "Programação",
+        "Exclusão",
+        "Formatação",
+        "Informação"
+      ],
+      "correct": {
+        "index": 3,
+        "text": "HTML é uma linguagem de..."
+      },
+      "number": 5,
+      "prompt": "O HTML (HyperText Markup Language) é uma linguagem de marcação, ou seja, estrutura e formata o código."
+    },
+    {
+      "answers": [
+        "font-style",
+        "font-iddent",
+        "size-text",
+        "font-size",
+        "text-size"
+      ],
+      "correct": {
+        "index": 3,
+        "text": "A propriedade CSS que define o tamanho do texto é font-size."
+      },
+      "number": 6,
+      "prompt": "Qual propriedade define o tamanho do texto em CSS?"
+    },
+    {
+      "answers": [
+        "Estilizar",
+        "Incluir formulários",
+        "Criar animações",
+        "Segurança da página",
+        "Conectar usuários"
+      ],
+      "correct": {
+        "index": 2,
+        "text": "A principal função do JavaScript nas páginas web é criar animações em transições, pop-ups, carregamentos, etc."
+      },
+      "number": 7,
+      "prompt": "JavaScript é usado nas páginas web para:"
+    },
+    {
+      "answers": [
+        "externa, com uso de folha de estilo.",
+        "interna, com uso da tag < style >.",
+        "combinada de in-line e interna.",
+        "in-line, com uso do atributo style.",
+        "atráves de link"
+      ],
+      "correct": {
+        "index": 0,
+        "text": "A melhor maneira de utilizar o CSS é através do uso de folha de estilo externa."
+      },
+      "number": 8,
+      "prompt": "Entre os possíveis métodos de aplicar CSS a um documento HTML, o que importa maior flexibilidade e otimização na manutenção é a aplicação..."
+    },
+    {
+      "answers": [
+        "< b > e < sup >",
+        "< b > e <blink>",
+        "< sup > e < strong >",
+        "< b > e < strong >",
+        "< strong > e < i >"
+      ],
+      "correct": {
+        "index": 3,
+        "text": "As tags < b > e < strong > possuem a mesma funcionalidade: Deixar as palavras em negrito."
+      },
+      "number": 9,
+      "prompt": "Efeitos similares em HTML são obtidos com as tags: "
+    },
+    {
+      "answers": [
+        "% e !=",
+        "MOD e <>",
+        "& e !=",
+        "MOD e !=",
+        "% e <>"
+      ],
+      "correct": {
+        "index": 0,
+        "text": "% funciona em divisões com resto. Já o != é o operador da desigualdade."
+      },
+      "number": 10,
+      "prompt": "Em JavaScript, os operadores que realizam as operações resto da divisão e teste da desigualdade, são, respectivamente: "
+    }
+  ],
+  "title": "Quiz - HTML, CSS e JavaScript",
+  "url": "http://apps-staging.urban.org/features/quick-quiz/"
+}
