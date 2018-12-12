@@ -1,0 +1,30 @@
+.container {
+	height: 20em;
+}
+
+img {
+	width: 30%;
+	margin-top: 3%;
+	margin-left: 35%;
+}
+
+#aulas {
+	width: 100%;
+	height: 20em;
+	background-color: #228B22;
+}
+
+#aulas img {
+	width: 10%;
+	margin-left: 12%;
+	margin-top: 5%;
+}
+
+a {
+	font-size: 15pt;
+}
+
+p {
+	font-size: 15pt;
+	color: #228B22;
+}
